@@ -1,0 +1,3809 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/ico" href="https://iamrohit.in/wp-content/uploads/2019/11/cropped-iamrohit.in_-32x32.png" sizes="32x32" />
+<title> YoSinTV Emoji : Android TV | Mobile Copy Paste Emoji </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="google-site-verification" content="Gt1XIKLzd1w-Y589F8_jUR0MGQWCUf3CsLoyzvp9pOI" />
+<link rel="stylesheet" type="text/css" href="https://agecalculator.iamrohit.in/lib/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+<style>
+      html, body {
+        font-family: 'Varela Round', sans-serif;
+        overflow-x: hidden;
+        font-size:18px;
+      }
+      a {
+        color:#0051C3;
+    }
+    a:hover{
+        color:#013a8a;
+    }
+    
+#button {
+  display: inline-block;
+  background-color: #2065d4;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 35px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+      .sticky {
+  position: fixed;
+  bottom: 0px;
+  width:100%;
+  right:.1%;
+  left:.1%;
+}
+
+.fancy-font {
+    font-size:18px;
+    
+}
+
+.sidebar-wrapper, .sidebar-active, input, textarea {
+    
+}
+
+
+
+    </style>
+<style>
+  .shadow-box{
+      margin-top:10px;margin-right:0px;text-align:center; border: 1px solid;
+      padding: 8px;
+     -webkit-box-shadow: 0 6px 5px -6px #777;
+     -moz-box-shadow: 0 6px 5px -6px #777;
+          box-shadow: 0 6px 5px -6px #777;
+      margin-left:0px;
+      border-radius: 8px;
+}
+
+
+.shadow-box:hover {
+  
+  background:yellow;
+}
+
+
+
+.copy-txt:hover {
+    cursor:pointer;
+}
+
+.ext {
+    font-size:20px; 
+    margin-top:-20px; 
+    margin-bottom:-10px; 
+    margin-right:-8px; 
+    float:right;
+    display:none;
+}
+
+.cp {
+    font-size:20px; 
+    margin-top:-22px; 
+    margin-bottom:-10px; 
+    margin-left:-7px; 
+    float:left;
+    display:none;
+}
+
+.shadow-box:hover .ext, .shadow-box:hover .cp {
+  display:block;
+}
+
+</style>
+<style>
+#info {
+    font-size: 20px;
+    }
+    #div_start {
+    float: right;
+    }
+    #headline {
+    text-decoration: none
+    }
+    #results {
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    min-height: 150px;
+    }
+    #start_button {
+    border: 0;
+    background-color:transparent;
+    padding: 0;
+    }
+    .interim {
+    color: gray;
+    }
+    .final {
+    color: black;
+    padding-right: 3px;
+    }
+    .button {
+    display: none;
+    }
+    .marquee {
+    margin: 20px auto;
+    }
+
+    #buttons {
+    margin: 10px 0;
+    position: relative;
+    top: -50px;
+    }
+
+    #copy {
+    margin-top: 20px;
+    }
+
+    #copy > div {
+    display: none;
+    margin: 0 70px;
+    }
+    
+    .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #333333;
+    width:96%;
+    margin:11px auto;
+    border-radius:20px;
+}
+    
+    .fa {
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin:11px;
+}
+
+.fa{display:none;}
+.input-group-btn{display:none;}
+
+
+.input-group .form-control{width:1268px;margin:0 auto;padding:5px 22px;}
+    </style>
+<style>
+.emoji {
+    font-size:34px;margin:8px 6px;float:left; width:19%; text-align:center;cursor: pointer;height:70px;border:2px solid #FFC83D;
+    box-shadow:none;
+}
+.emojione {
+    font-size:34px;margin-left:2px; margin-right:2px; width:85px; text-align:center;cursor: pointer;;
+}
+.toast {
+  opacity: 1 !important;
+  margin-bottom:100px !important;
+}
+
+#toast-container > div {
+  opacity: 1 !important; 
+  margin-bottom:100px !important;
+}
+
+[data-tooltip]::before {
+    /* needed - do not touch */
+    content: attr(data-tooltip);
+    position: absolute;
+    opacity: 0;
+    font-size:12px;
+
+    /* customizable */
+    
+    padding: 10px;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px silver;
+    z-index:99;
+}
+
+[data-tooltip]:hover::before {
+    /* needed - do not touch */
+    opacity: 1;
+
+    /* customizable */
+    background: yellow;
+    margin-top: -50px;
+    margin-left: -30px;
+    font-size:12px;
+    z-index:99;
+}
+
+[data-tooltip]:not([data-tooltip-persistent])::before {
+    pointer-events: none;
+}
+
+
+
+
+    </style>
+</head>
+<style>
+.preloader1 {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('https://lab.iamrohit.in/loader/loader.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-menu {
+    text-align: center;
+}
+
+.footer-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-menu ul li a:hover {
+    color: #ccc;
+}
+
+</style>
+<body>
+<a id="button"></a>
+<div class="preloader"></div>
+<div>
+<header class="container-fuild header" style="text-shadow: 2px 2px 2px black;">
+<div class="container-fuild">
+<div class="flex align-items justify-content">
+<div class="logo" style="width:200px;">
+<a href="/" style="font-size:24px; color:#FFFFFF; font-weight:bold;">
+YoSinTV Emoji
+</a>
+</div>
+<div class="menu xs-hide sm-hide" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<ul>
+<li><a title="Home" itemprop="url" href="/">Smileys</a></li>
+<li><a title="Home" itemprop="url" href="/people.php">People & Body</a></li>
+<li><a title="Home" itemprop="url" href="/animals.php">Animals & Nature</a></li>
+<li><a title="Home" itemprop="url" href="/food.php">Food</a></li>
+<li><a title="Home" itemprop="url" href="/travel.php">Travel & Places</a></li>
+<li><a title="Home" itemprop="url" href="/activities.php">Activities</a></li>
+<li><a title="Home" itemprop="url" href="/objects.php">Objects</a></li>
+<li><a title="Home" itemprop="url" href="/symbols.php">Symbols</a></li>
+<li><a title="Home" itemprop="url" href="/flags.php">Flags</a></li>
+</ul>
+</div>
+<div class="md-hide lg-hide">
+<div class="menu-btn">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="container-fuild" style="margin-left:2%; margin-right:2%">
+<form method="post" action="/">
+<div class="row shadow-box" style="background:#fff; color:#FFFFFF;padding-right:0px;">
+<div class="col-md-6 col-md-offset-3 text-center">
+<input type="text" class="form-control" style="font-size:20px;height:45.5px;" placeholder="Find emojis by name" name="emoji" id="emoji" required="required" value>
+<span class="input-group-btn">
+<button class="btn btn-lg btn-success findemoji" type="submit"><i class="fa fa-search"></i></button>
+</span>
+</div>
+</div>
+</form>
+<center><h3>✂️ Copy and 📋 Paste Emoji 👍 Android TV | Mobile</h3></center>
+<center><h3>Click on emoji to copy</h3></center><div class="row" style="text-align:center !important;">
+<div class="sec-head-row text-center">
+<div class="sec-head">
+<h1 itemprop="headline" class="page-title" id="Flags"> Flags</h1>
+</div>
+</div>
+<div class="col-md-12">
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="chequered flag" data-clipboard-target="#emoji-4307">
+<span id="emoji-4307" tt="chequered flag">🏁</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/chequered-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="triangular flag" data-clipboard-target="#emoji-4308">
+<span id="emoji-4308" tt="triangular flag">🚩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/triangular-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="crossed flags" data-clipboard-target="#emoji-4309">
+<span id="emoji-4309" tt="crossed flags">🎌</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/crossed-flags" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="black flag" data-clipboard-target="#emoji-4310">
+<span id="emoji-4310" tt="black flag">🏴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/black-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="white flag" data-clipboard-target="#emoji-4311">
+<span id="emoji-4311" tt="white flag">🏳️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/white-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="white flag" data-clipboard-target="#emoji-4312">
+<span id="emoji-4312" tt="white flag">🏳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/white-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="rainbow flag" data-clipboard-target="#emoji-4313">
+<span id="emoji-4313" tt="rainbow flag">🏳️‍🌈</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/rainbow-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="rainbow flag" data-clipboard-target="#emoji-4314">
+<span id="emoji-4314" tt="rainbow flag">🏳‍🌈</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/rainbow-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="transgender flag" data-clipboard-target="#emoji-4315">
+<span id="emoji-4315" tt="transgender flag">🏳️‍⚧️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/transgender-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="transgender flag" data-clipboard-target="#emoji-4316">
+<span id="emoji-4316" tt="transgender flag">🏳‍⚧️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/transgender-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="transgender flag" data-clipboard-target="#emoji-4317">
+<span id="emoji-4317" tt="transgender flag">🏳️‍⚧</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/transgender-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="transgender flag" data-clipboard-target="#emoji-4318">
+<span id="emoji-4318" tt="transgender flag">🏳‍⚧</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/transgender-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="pirate flag" data-clipboard-target="#emoji-4319">
+<span id="emoji-4319" tt="pirate flag">🏴‍☠️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/pirate-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="pirate flag" data-clipboard-target="#emoji-4320">
+<span id="emoji-4320" tt="pirate flag">🏴‍☠</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/pirate-flag" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Ascension Island" data-clipboard-target="#emoji-4321">
+<span id="emoji-4321" tt="flag: Ascension Island">🇦🇨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Ascension-Island" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Andorra" data-clipboard-target="#emoji-4322">
+<span id="emoji-4322" tt="flag: Andorra">🇦🇩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Andorra" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: United Arab Emirates" data-clipboard-target="#emoji-4323">
+<span id="emoji-4323" tt="flag: United Arab Emirates">🇦🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-United-Arab-Emirates" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Afghanistan" data-clipboard-target="#emoji-4324">
+<span id="emoji-4324" tt="flag: Afghanistan">🇦🇫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Afghanistan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Antigua & Barbuda" data-clipboard-target="#emoji-4325">
+<span id="emoji-4325" tt="flag: Antigua & Barbuda">🇦🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Antigua--Barbuda" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Anguilla" data-clipboard-target="#emoji-4326">
+<span id="emoji-4326" tt="flag: Anguilla">🇦🇮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Anguilla" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Albania" data-clipboard-target="#emoji-4327">
+<span id="emoji-4327" tt="flag: Albania">🇦🇱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Albania" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Armenia" data-clipboard-target="#emoji-4328">
+<span id="emoji-4328" tt="flag: Armenia">🇦🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Armenia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Angola" data-clipboard-target="#emoji-4329">
+<span id="emoji-4329" tt="flag: Angola">🇦🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Angola" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Antarctica" data-clipboard-target="#emoji-4330">
+<span id="emoji-4330" tt="flag: Antarctica">🇦🇶</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Antarctica" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Argentina" data-clipboard-target="#emoji-4331">
+<span id="emoji-4331" tt="flag: Argentina">🇦🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Argentina" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: American Samoa" data-clipboard-target="#emoji-4332">
+<span id="emoji-4332" tt="flag: American Samoa">🇦🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-American-Samoa" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Austria" data-clipboard-target="#emoji-4333">
+<span id="emoji-4333" tt="flag: Austria">🇦🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Austria" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Australia" data-clipboard-target="#emoji-4334">
+<span id="emoji-4334" tt="flag: Australia">🇦🇺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Australia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Aruba" data-clipboard-target="#emoji-4335">
+<span id="emoji-4335" tt="flag: Aruba">🇦🇼</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Aruba" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Åland Islands" data-clipboard-target="#emoji-4336">
+<span id="emoji-4336" tt="flag: Åland Islands">🇦🇽</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-land-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Azerbaijan" data-clipboard-target="#emoji-4337">
+<span id="emoji-4337" tt="flag: Azerbaijan">🇦🇿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Azerbaijan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Bosnia & Herzegovina" data-clipboard-target="#emoji-4338">
+<span id="emoji-4338" tt="flag: Bosnia & Herzegovina">🇧🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Bosnia--Herzegovina" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Barbados" data-clipboard-target="#emoji-4339">
+<span id="emoji-4339" tt="flag: Barbados">🇧🇧</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Barbados" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Bangladesh" data-clipboard-target="#emoji-4340">
+<span id="emoji-4340" tt="flag: Bangladesh">🇧🇩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Bangladesh" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Belgium" data-clipboard-target="#emoji-4341">
+<span id="emoji-4341" tt="flag: Belgium">🇧🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Belgium" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Burkina Faso" data-clipboard-target="#emoji-4342">
+<span id="emoji-4342" tt="flag: Burkina Faso">🇧🇫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Burkina-Faso" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Bulgaria" data-clipboard-target="#emoji-4343">
+<span id="emoji-4343" tt="flag: Bulgaria">🇧🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Bulgaria" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Bahrain" data-clipboard-target="#emoji-4344">
+<span id="emoji-4344" tt="flag: Bahrain">🇧🇭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Bahrain" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Burundi" data-clipboard-target="#emoji-4345">
+<span id="emoji-4345" tt="flag: Burundi">🇧🇮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Burundi" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Benin" data-clipboard-target="#emoji-4346">
+<span id="emoji-4346" tt="flag: Benin">🇧🇯</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Benin" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: St. Barthélemy" data-clipboard-target="#emoji-4347">
+<span id="emoji-4347" tt="flag: St. Barthélemy">🇧🇱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-St-Barthlemy" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Bermuda" data-clipboard-target="#emoji-4348">
+<span id="emoji-4348" tt="flag: Bermuda">🇧🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Bermuda" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Brunei" data-clipboard-target="#emoji-4349">
+<span id="emoji-4349" tt="flag: Brunei">🇧🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Brunei" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Bolivia" data-clipboard-target="#emoji-4350">
+<span id="emoji-4350" tt="flag: Bolivia">🇧🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Bolivia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Caribbean Netherlands" data-clipboard-target="#emoji-4351">
+<span id="emoji-4351" tt="flag: Caribbean Netherlands">🇧🇶</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Caribbean-Netherlands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Brazil" data-clipboard-target="#emoji-4352">
+<span id="emoji-4352" tt="flag: Brazil">🇧🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Brazil" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Bahamas" data-clipboard-target="#emoji-4353">
+<span id="emoji-4353" tt="flag: Bahamas">🇧🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Bahamas" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Bhutan" data-clipboard-target="#emoji-4354">
+<span id="emoji-4354" tt="flag: Bhutan">🇧🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Bhutan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Bouvet Island" data-clipboard-target="#emoji-4355">
+<span id="emoji-4355" tt="flag: Bouvet Island">🇧🇻</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Bouvet-Island" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Botswana" data-clipboard-target="#emoji-4356">
+<span id="emoji-4356" tt="flag: Botswana">🇧🇼</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Botswana" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Belarus" data-clipboard-target="#emoji-4357">
+<span id="emoji-4357" tt="flag: Belarus">🇧🇾</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Belarus" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Belize" data-clipboard-target="#emoji-4358">
+<span id="emoji-4358" tt="flag: Belize">🇧🇿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Belize" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Canada" data-clipboard-target="#emoji-4359">
+<span id="emoji-4359" tt="flag: Canada">🇨🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Canada" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Cocos (Keeling) Islands" data-clipboard-target="#emoji-4360">
+<span id="emoji-4360" tt="flag: Cocos (Keeling) Islands">🇨🇨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Cocos-Keeling-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Congo - Kinshasa" data-clipboard-target="#emoji-4361">
+<span id="emoji-4361" tt="flag: Congo - Kinshasa">🇨🇩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Congo---Kinshasa" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Central African Republic" data-clipboard-target="#emoji-4362">
+<span id="emoji-4362" tt="flag: Central African Republic">🇨🇫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Central-African-Republic" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Congo - Brazzaville" data-clipboard-target="#emoji-4363">
+<span id="emoji-4363" tt="flag: Congo - Brazzaville">🇨🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Congo---Brazzaville" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Switzerland" data-clipboard-target="#emoji-4364">
+<span id="emoji-4364" tt="flag: Switzerland">🇨🇭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Switzerland" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Côte d’Ivoire" data-clipboard-target="#emoji-4365">
+<span id="emoji-4365" tt="flag: Côte d’Ivoire">🇨🇮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Cte-dIvoire" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Cook Islands" data-clipboard-target="#emoji-4366">
+<span id="emoji-4366" tt="flag: Cook Islands">🇨🇰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Cook-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Chile" data-clipboard-target="#emoji-4367">
+<span id="emoji-4367" tt="flag: Chile">🇨🇱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Chile" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Cameroon" data-clipboard-target="#emoji-4368">
+<span id="emoji-4368" tt="flag: Cameroon">🇨🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Cameroon" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: China" data-clipboard-target="#emoji-4369">
+<span id="emoji-4369" tt="flag: China">🇨🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-China" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Colombia" data-clipboard-target="#emoji-4370">
+<span id="emoji-4370" tt="flag: Colombia">🇨🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Colombia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Clipperton Island" data-clipboard-target="#emoji-4371">
+<span id="emoji-4371" tt="flag: Clipperton Island">🇨🇵</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Clipperton-Island" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Costa Rica" data-clipboard-target="#emoji-4372">
+<span id="emoji-4372" tt="flag: Costa Rica">🇨🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Costa-Rica" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Cuba" data-clipboard-target="#emoji-4373">
+<span id="emoji-4373" tt="flag: Cuba">🇨🇺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Cuba" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Cape Verde" data-clipboard-target="#emoji-4374">
+<span id="emoji-4374" tt="flag: Cape Verde">🇨🇻</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Cape-Verde" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Curaçao" data-clipboard-target="#emoji-4375">
+<span id="emoji-4375" tt="flag: Curaçao">🇨🇼</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Curaao" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Christmas Island" data-clipboard-target="#emoji-4376">
+<span id="emoji-4376" tt="flag: Christmas Island">🇨🇽</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Christmas-Island" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Cyprus" data-clipboard-target="#emoji-4377">
+<span id="emoji-4377" tt="flag: Cyprus">🇨🇾</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Cyprus" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Czechia" data-clipboard-target="#emoji-4378">
+<span id="emoji-4378" tt="flag: Czechia">🇨🇿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Czechia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Germany" data-clipboard-target="#emoji-4379">
+<span id="emoji-4379" tt="flag: Germany">🇩🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Germany" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Diego Garcia" data-clipboard-target="#emoji-4380">
+<span id="emoji-4380" tt="flag: Diego Garcia">🇩🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Diego-Garcia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Djibouti" data-clipboard-target="#emoji-4381">
+<span id="emoji-4381" tt="flag: Djibouti">🇩🇯</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Djibouti" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Denmark" data-clipboard-target="#emoji-4382">
+<span id="emoji-4382" tt="flag: Denmark">🇩🇰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Denmark" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Dominica" data-clipboard-target="#emoji-4383">
+<span id="emoji-4383" tt="flag: Dominica">🇩🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Dominica" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Dominican Republic" data-clipboard-target="#emoji-4384">
+<span id="emoji-4384" tt="flag: Dominican Republic">🇩🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Dominican-Republic" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Algeria" data-clipboard-target="#emoji-4385">
+<span id="emoji-4385" tt="flag: Algeria">🇩🇿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Algeria" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Ceuta & Melilla" data-clipboard-target="#emoji-4386">
+<span id="emoji-4386" tt="flag: Ceuta & Melilla">🇪🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Ceuta--Melilla" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Ecuador" data-clipboard-target="#emoji-4387">
+<span id="emoji-4387" tt="flag: Ecuador">🇪🇨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Ecuador" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Estonia" data-clipboard-target="#emoji-4388">
+<span id="emoji-4388" tt="flag: Estonia">🇪🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Estonia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Egypt" data-clipboard-target="#emoji-4389">
+<span id="emoji-4389" tt="flag: Egypt">🇪🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Egypt" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Western Sahara" data-clipboard-target="#emoji-4390">
+<span id="emoji-4390" tt="flag: Western Sahara">🇪🇭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Western-Sahara" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Eritrea" data-clipboard-target="#emoji-4391">
+<span id="emoji-4391" tt="flag: Eritrea">🇪🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Eritrea" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Spain" data-clipboard-target="#emoji-4392">
+<span id="emoji-4392" tt="flag: Spain">🇪🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Spain" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Ethiopia" data-clipboard-target="#emoji-4393">
+<span id="emoji-4393" tt="flag: Ethiopia">🇪🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Ethiopia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: European Union" data-clipboard-target="#emoji-4394">
+<span id="emoji-4394" tt="flag: European Union">🇪🇺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-European-Union" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Finland" data-clipboard-target="#emoji-4395">
+<span id="emoji-4395" tt="flag: Finland">🇫🇮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Finland" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Fiji" data-clipboard-target="#emoji-4396">
+<span id="emoji-4396" tt="flag: Fiji">🇫🇯</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Fiji" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Falkland Islands" data-clipboard-target="#emoji-4397">
+<span id="emoji-4397" tt="flag: Falkland Islands">🇫🇰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Falkland-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Micronesia" data-clipboard-target="#emoji-4398">
+<span id="emoji-4398" tt="flag: Micronesia">🇫🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Micronesia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Faroe Islands" data-clipboard-target="#emoji-4399">
+<span id="emoji-4399" tt="flag: Faroe Islands">🇫🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Faroe-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: France" data-clipboard-target="#emoji-4400">
+<span id="emoji-4400" tt="flag: France">🇫🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-France" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Gabon" data-clipboard-target="#emoji-4401">
+<span id="emoji-4401" tt="flag: Gabon">🇬🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Gabon" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: United Kingdom" data-clipboard-target="#emoji-4402">
+<span id="emoji-4402" tt="flag: United Kingdom">🇬🇧</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-United-Kingdom" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Grenada" data-clipboard-target="#emoji-4403">
+<span id="emoji-4403" tt="flag: Grenada">🇬🇩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Grenada" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Georgia" data-clipboard-target="#emoji-4404">
+<span id="emoji-4404" tt="flag: Georgia">🇬🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Georgia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: French Guiana" data-clipboard-target="#emoji-4405">
+<span id="emoji-4405" tt="flag: French Guiana">🇬🇫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-French-Guiana" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Guernsey" data-clipboard-target="#emoji-4406">
+<span id="emoji-4406" tt="flag: Guernsey">🇬🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Guernsey" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Ghana" data-clipboard-target="#emoji-4407">
+<span id="emoji-4407" tt="flag: Ghana">🇬🇭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Ghana" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Gibraltar" data-clipboard-target="#emoji-4408">
+<span id="emoji-4408" tt="flag: Gibraltar">🇬🇮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Gibraltar" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Greenland" data-clipboard-target="#emoji-4409">
+<span id="emoji-4409" tt="flag: Greenland">🇬🇱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Greenland" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Gambia" data-clipboard-target="#emoji-4410">
+<span id="emoji-4410" tt="flag: Gambia">🇬🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Gambia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Guinea" data-clipboard-target="#emoji-4411">
+<span id="emoji-4411" tt="flag: Guinea">🇬🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Guinea" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Guadeloupe" data-clipboard-target="#emoji-4412">
+<span id="emoji-4412" tt="flag: Guadeloupe">🇬🇵</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Guadeloupe" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Equatorial Guinea" data-clipboard-target="#emoji-4413">
+<span id="emoji-4413" tt="flag: Equatorial Guinea">🇬🇶</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Equatorial-Guinea" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Greece" data-clipboard-target="#emoji-4414">
+<span id="emoji-4414" tt="flag: Greece">🇬🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Greece" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: South Georgia & South Sandwich Islands" data-clipboard-target="#emoji-4415">
+<span id="emoji-4415" tt="flag: South Georgia & South Sandwich Islands">🇬🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-South-Georgia--South-Sandwich-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Guatemala" data-clipboard-target="#emoji-4416">
+<span id="emoji-4416" tt="flag: Guatemala">🇬🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Guatemala" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Guam" data-clipboard-target="#emoji-4417">
+<span id="emoji-4417" tt="flag: Guam">🇬🇺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Guam" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Guinea-Bissau" data-clipboard-target="#emoji-4418">
+<span id="emoji-4418" tt="flag: Guinea-Bissau">🇬🇼</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Guinea-Bissau" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Guyana" data-clipboard-target="#emoji-4419">
+<span id="emoji-4419" tt="flag: Guyana">🇬🇾</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Guyana" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Hong Kong SAR China" data-clipboard-target="#emoji-4420">
+<span id="emoji-4420" tt="flag: Hong Kong SAR China">🇭🇰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Hong-Kong-SAR-China" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Heard & McDonald Islands" data-clipboard-target="#emoji-4421">
+<span id="emoji-4421" tt="flag: Heard & McDonald Islands">🇭🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Heard--McDonald-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Honduras" data-clipboard-target="#emoji-4422">
+<span id="emoji-4422" tt="flag: Honduras">🇭🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Honduras" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Croatia" data-clipboard-target="#emoji-4423">
+<span id="emoji-4423" tt="flag: Croatia">🇭🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Croatia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Haiti" data-clipboard-target="#emoji-4424">
+<span id="emoji-4424" tt="flag: Haiti">🇭🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Haiti" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Hungary" data-clipboard-target="#emoji-4425">
+<span id="emoji-4425" tt="flag: Hungary">🇭🇺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Hungary" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Canary Islands" data-clipboard-target="#emoji-4426">
+<span id="emoji-4426" tt="flag: Canary Islands">🇮🇨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Canary-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Indonesia" data-clipboard-target="#emoji-4427">
+<span id="emoji-4427" tt="flag: Indonesia">🇮🇩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Indonesia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Ireland" data-clipboard-target="#emoji-4428">
+<span id="emoji-4428" tt="flag: Ireland">🇮🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Ireland" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Israel" data-clipboard-target="#emoji-4429">
+<span id="emoji-4429" tt="flag: Israel">🇮🇱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Israel" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Isle of Man" data-clipboard-target="#emoji-4430">
+<span id="emoji-4430" tt="flag: Isle of Man">🇮🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Isle-of-Man" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: India" data-clipboard-target="#emoji-4431">
+<span id="emoji-4431" tt="flag: India">🇮🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-India" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: British Indian Ocean Territory" data-clipboard-target="#emoji-4432">
+<span id="emoji-4432" tt="flag: British Indian Ocean Territory">🇮🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-British-Indian-Ocean-Territory" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Iraq" data-clipboard-target="#emoji-4433">
+<span id="emoji-4433" tt="flag: Iraq">🇮🇶</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Iraq" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Iran" data-clipboard-target="#emoji-4434">
+<span id="emoji-4434" tt="flag: Iran">🇮🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Iran" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Iceland" data-clipboard-target="#emoji-4435">
+<span id="emoji-4435" tt="flag: Iceland">🇮🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Iceland" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Italy" data-clipboard-target="#emoji-4436">
+<span id="emoji-4436" tt="flag: Italy">🇮🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Italy" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Jersey" data-clipboard-target="#emoji-4437">
+<span id="emoji-4437" tt="flag: Jersey">🇯🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Jersey" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Jamaica" data-clipboard-target="#emoji-4438">
+<span id="emoji-4438" tt="flag: Jamaica">🇯🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Jamaica" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Jordan" data-clipboard-target="#emoji-4439">
+<span id="emoji-4439" tt="flag: Jordan">🇯🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Jordan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Japan" data-clipboard-target="#emoji-4440">
+<span id="emoji-4440" tt="flag: Japan">🇯🇵</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Japan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Kenya" data-clipboard-target="#emoji-4441">
+<span id="emoji-4441" tt="flag: Kenya">🇰🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Kenya" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Kyrgyzstan" data-clipboard-target="#emoji-4442">
+<span id="emoji-4442" tt="flag: Kyrgyzstan">🇰🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Kyrgyzstan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Cambodia" data-clipboard-target="#emoji-4443">
+<span id="emoji-4443" tt="flag: Cambodia">🇰🇭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Cambodia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Kiribati" data-clipboard-target="#emoji-4444">
+<span id="emoji-4444" tt="flag: Kiribati">🇰🇮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Kiribati" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Comoros" data-clipboard-target="#emoji-4445">
+<span id="emoji-4445" tt="flag: Comoros">🇰🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Comoros" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: St. Kitts & Nevis" data-clipboard-target="#emoji-4446">
+<span id="emoji-4446" tt="flag: St. Kitts & Nevis">🇰🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-St-Kitts--Nevis" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: North Korea" data-clipboard-target="#emoji-4447">
+<span id="emoji-4447" tt="flag: North Korea">🇰🇵</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-North-Korea" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: South Korea" data-clipboard-target="#emoji-4448">
+<span id="emoji-4448" tt="flag: South Korea">🇰🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-South-Korea" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Kuwait" data-clipboard-target="#emoji-4449">
+<span id="emoji-4449" tt="flag: Kuwait">🇰🇼</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Kuwait" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Cayman Islands" data-clipboard-target="#emoji-4450">
+<span id="emoji-4450" tt="flag: Cayman Islands">🇰🇾</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Cayman-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Kazakhstan" data-clipboard-target="#emoji-4451">
+<span id="emoji-4451" tt="flag: Kazakhstan">🇰🇿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Kazakhstan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Laos" data-clipboard-target="#emoji-4452">
+<span id="emoji-4452" tt="flag: Laos">🇱🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Laos" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Lebanon" data-clipboard-target="#emoji-4453">
+<span id="emoji-4453" tt="flag: Lebanon">🇱🇧</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Lebanon" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: St. Lucia" data-clipboard-target="#emoji-4454">
+<span id="emoji-4454" tt="flag: St. Lucia">🇱🇨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-St-Lucia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Liechtenstein" data-clipboard-target="#emoji-4455">
+<span id="emoji-4455" tt="flag: Liechtenstein">🇱🇮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Liechtenstein" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Sri Lanka" data-clipboard-target="#emoji-4456">
+<span id="emoji-4456" tt="flag: Sri Lanka">🇱🇰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Sri-Lanka" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Liberia" data-clipboard-target="#emoji-4457">
+<span id="emoji-4457" tt="flag: Liberia">🇱🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Liberia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Lesotho" data-clipboard-target="#emoji-4458">
+<span id="emoji-4458" tt="flag: Lesotho">🇱🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Lesotho" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Lithuania" data-clipboard-target="#emoji-4459">
+<span id="emoji-4459" tt="flag: Lithuania">🇱🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Lithuania" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Luxembourg" data-clipboard-target="#emoji-4460">
+<span id="emoji-4460" tt="flag: Luxembourg">🇱🇺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Luxembourg" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Latvia" data-clipboard-target="#emoji-4461">
+<span id="emoji-4461" tt="flag: Latvia">🇱🇻</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Latvia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Libya" data-clipboard-target="#emoji-4462">
+<span id="emoji-4462" tt="flag: Libya">🇱🇾</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Libya" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Morocco" data-clipboard-target="#emoji-4463">
+<span id="emoji-4463" tt="flag: Morocco">🇲🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Morocco" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Monaco" data-clipboard-target="#emoji-4464">
+<span id="emoji-4464" tt="flag: Monaco">🇲🇨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Monaco" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Moldova" data-clipboard-target="#emoji-4465">
+<span id="emoji-4465" tt="flag: Moldova">🇲🇩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Moldova" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Montenegro" data-clipboard-target="#emoji-4466">
+<span id="emoji-4466" tt="flag: Montenegro">🇲🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Montenegro" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: St. Martin" data-clipboard-target="#emoji-4467">
+<span id="emoji-4467" tt="flag: St. Martin">🇲🇫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-St-Martin" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Madagascar" data-clipboard-target="#emoji-4468">
+<span id="emoji-4468" tt="flag: Madagascar">🇲🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Madagascar" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Marshall Islands" data-clipboard-target="#emoji-4469">
+<span id="emoji-4469" tt="flag: Marshall Islands">🇲🇭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Marshall-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: North Macedonia" data-clipboard-target="#emoji-4470">
+<span id="emoji-4470" tt="flag: North Macedonia">🇲🇰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-North-Macedonia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Mali" data-clipboard-target="#emoji-4471">
+<span id="emoji-4471" tt="flag: Mali">🇲🇱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Mali" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Myanmar (Burma)" data-clipboard-target="#emoji-4472">
+<span id="emoji-4472" tt="flag: Myanmar (Burma)">🇲🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Myanmar-Burma" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Mongolia" data-clipboard-target="#emoji-4473">
+<span id="emoji-4473" tt="flag: Mongolia">🇲🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Mongolia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Macao SAR China" data-clipboard-target="#emoji-4474">
+<span id="emoji-4474" tt="flag: Macao SAR China">🇲🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Macao-SAR-China" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Northern Mariana Islands" data-clipboard-target="#emoji-4475">
+<span id="emoji-4475" tt="flag: Northern Mariana Islands">🇲🇵</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Northern-Mariana-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Martinique" data-clipboard-target="#emoji-4476">
+<span id="emoji-4476" tt="flag: Martinique">🇲🇶</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Martinique" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Mauritania" data-clipboard-target="#emoji-4477">
+<span id="emoji-4477" tt="flag: Mauritania">🇲🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Mauritania" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Montserrat" data-clipboard-target="#emoji-4478">
+<span id="emoji-4478" tt="flag: Montserrat">🇲🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Montserrat" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Malta" data-clipboard-target="#emoji-4479">
+<span id="emoji-4479" tt="flag: Malta">🇲🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Malta" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Mauritius" data-clipboard-target="#emoji-4480">
+<span id="emoji-4480" tt="flag: Mauritius">🇲🇺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Mauritius" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Maldives" data-clipboard-target="#emoji-4481">
+<span id="emoji-4481" tt="flag: Maldives">🇲🇻</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Maldives" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Malawi" data-clipboard-target="#emoji-4482">
+<span id="emoji-4482" tt="flag: Malawi">🇲🇼</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Malawi" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Mexico" data-clipboard-target="#emoji-4483">
+<span id="emoji-4483" tt="flag: Mexico">🇲🇽</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Mexico" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Malaysia" data-clipboard-target="#emoji-4484">
+<span id="emoji-4484" tt="flag: Malaysia">🇲🇾</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Malaysia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Mozambique" data-clipboard-target="#emoji-4485">
+<span id="emoji-4485" tt="flag: Mozambique">🇲🇿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Mozambique" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Namibia" data-clipboard-target="#emoji-4486">
+<span id="emoji-4486" tt="flag: Namibia">🇳🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Namibia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: New Caledonia" data-clipboard-target="#emoji-4487">
+<span id="emoji-4487" tt="flag: New Caledonia">🇳🇨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-New-Caledonia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Niger" data-clipboard-target="#emoji-4488">
+<span id="emoji-4488" tt="flag: Niger">🇳🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Niger" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Norfolk Island" data-clipboard-target="#emoji-4489">
+<span id="emoji-4489" tt="flag: Norfolk Island">🇳🇫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Norfolk-Island" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Nigeria" data-clipboard-target="#emoji-4490">
+<span id="emoji-4490" tt="flag: Nigeria">🇳🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Nigeria" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Nicaragua" data-clipboard-target="#emoji-4491">
+<span id="emoji-4491" tt="flag: Nicaragua">🇳🇮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Nicaragua" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Netherlands" data-clipboard-target="#emoji-4492">
+<span id="emoji-4492" tt="flag: Netherlands">🇳🇱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Netherlands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Norway" data-clipboard-target="#emoji-4493">
+<span id="emoji-4493" tt="flag: Norway">🇳🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Norway" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Nepal" data-clipboard-target="#emoji-4494">
+<span id="emoji-4494" tt="flag: Nepal">🇳🇵</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Nepal" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Nauru" data-clipboard-target="#emoji-4495">
+<span id="emoji-4495" tt="flag: Nauru">🇳🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Nauru" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Niue" data-clipboard-target="#emoji-4496">
+<span id="emoji-4496" tt="flag: Niue">🇳🇺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Niue" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: New Zealand" data-clipboard-target="#emoji-4497">
+<span id="emoji-4497" tt="flag: New Zealand">🇳🇿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-New-Zealand" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Oman" data-clipboard-target="#emoji-4498">
+<span id="emoji-4498" tt="flag: Oman">🇴🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Oman" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Panama" data-clipboard-target="#emoji-4499">
+<span id="emoji-4499" tt="flag: Panama">🇵🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Panama" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Peru" data-clipboard-target="#emoji-4500">
+<span id="emoji-4500" tt="flag: Peru">🇵🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Peru" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: French Polynesia" data-clipboard-target="#emoji-4501">
+<span id="emoji-4501" tt="flag: French Polynesia">🇵🇫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-French-Polynesia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Papua New Guinea" data-clipboard-target="#emoji-4502">
+<span id="emoji-4502" tt="flag: Papua New Guinea">🇵🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Papua-New-Guinea" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Philippines" data-clipboard-target="#emoji-4503">
+<span id="emoji-4503" tt="flag: Philippines">🇵🇭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Philippines" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Pakistan" data-clipboard-target="#emoji-4504">
+<span id="emoji-4504" tt="flag: Pakistan">🇵🇰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Pakistan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Poland" data-clipboard-target="#emoji-4505">
+<span id="emoji-4505" tt="flag: Poland">🇵🇱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Poland" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: St. Pierre & Miquelon" data-clipboard-target="#emoji-4506">
+<span id="emoji-4506" tt="flag: St. Pierre & Miquelon">🇵🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-St-Pierre--Miquelon" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Pitcairn Islands" data-clipboard-target="#emoji-4507">
+<span id="emoji-4507" tt="flag: Pitcairn Islands">🇵🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Pitcairn-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Puerto Rico" data-clipboard-target="#emoji-4508">
+<span id="emoji-4508" tt="flag: Puerto Rico">🇵🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Puerto-Rico" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Palestinian Territories" data-clipboard-target="#emoji-4509">
+<span id="emoji-4509" tt="flag: Palestinian Territories">🇵🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Palestinian-Territories" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Portugal" data-clipboard-target="#emoji-4510">
+<span id="emoji-4510" tt="flag: Portugal">🇵🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Portugal" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Palau" data-clipboard-target="#emoji-4511">
+<span id="emoji-4511" tt="flag: Palau">🇵🇼</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Palau" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Paraguay" data-clipboard-target="#emoji-4512">
+<span id="emoji-4512" tt="flag: Paraguay">🇵🇾</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Paraguay" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Qatar" data-clipboard-target="#emoji-4513">
+<span id="emoji-4513" tt="flag: Qatar">🇶🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Qatar" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Réunion" data-clipboard-target="#emoji-4514">
+<span id="emoji-4514" tt="flag: Réunion">🇷🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Runion" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Romania" data-clipboard-target="#emoji-4515">
+<span id="emoji-4515" tt="flag: Romania">🇷🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Romania" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Serbia" data-clipboard-target="#emoji-4516">
+<span id="emoji-4516" tt="flag: Serbia">🇷🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Serbia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Russia" data-clipboard-target="#emoji-4517">
+<span id="emoji-4517" tt="flag: Russia">🇷🇺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Russia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Rwanda" data-clipboard-target="#emoji-4518">
+<span id="emoji-4518" tt="flag: Rwanda">🇷🇼</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Rwanda" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Saudi Arabia" data-clipboard-target="#emoji-4519">
+<span id="emoji-4519" tt="flag: Saudi Arabia">🇸🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Saudi-Arabia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Solomon Islands" data-clipboard-target="#emoji-4520">
+<span id="emoji-4520" tt="flag: Solomon Islands">🇸🇧</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Solomon-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Seychelles" data-clipboard-target="#emoji-4521">
+<span id="emoji-4521" tt="flag: Seychelles">🇸🇨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Seychelles" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Sudan" data-clipboard-target="#emoji-4522">
+<span id="emoji-4522" tt="flag: Sudan">🇸🇩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Sudan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Sweden" data-clipboard-target="#emoji-4523">
+<span id="emoji-4523" tt="flag: Sweden">🇸🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Sweden" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Singapore" data-clipboard-target="#emoji-4524">
+<span id="emoji-4524" tt="flag: Singapore">🇸🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Singapore" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: St. Helena" data-clipboard-target="#emoji-4525">
+<span id="emoji-4525" tt="flag: St. Helena">🇸🇭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-St-Helena" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Slovenia" data-clipboard-target="#emoji-4526">
+<span id="emoji-4526" tt="flag: Slovenia">🇸🇮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Slovenia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Svalbard & Jan Mayen" data-clipboard-target="#emoji-4527">
+<span id="emoji-4527" tt="flag: Svalbard & Jan Mayen">🇸🇯</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Svalbard--Jan-Mayen" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Slovakia" data-clipboard-target="#emoji-4528">
+<span id="emoji-4528" tt="flag: Slovakia">🇸🇰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Slovakia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Sierra Leone" data-clipboard-target="#emoji-4529">
+<span id="emoji-4529" tt="flag: Sierra Leone">🇸🇱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Sierra-Leone" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: San Marino" data-clipboard-target="#emoji-4530">
+<span id="emoji-4530" tt="flag: San Marino">🇸🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-San-Marino" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Senegal" data-clipboard-target="#emoji-4531">
+<span id="emoji-4531" tt="flag: Senegal">🇸🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Senegal" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Somalia" data-clipboard-target="#emoji-4532">
+<span id="emoji-4532" tt="flag: Somalia">🇸🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Somalia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Suriname" data-clipboard-target="#emoji-4533">
+<span id="emoji-4533" tt="flag: Suriname">🇸🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Suriname" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: South Sudan" data-clipboard-target="#emoji-4534">
+<span id="emoji-4534" tt="flag: South Sudan">🇸🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-South-Sudan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: São Tomé & Príncipe" data-clipboard-target="#emoji-4535">
+<span id="emoji-4535" tt="flag: São Tomé & Príncipe">🇸🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-So-Tom--Prncipe" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: El Salvador" data-clipboard-target="#emoji-4536">
+<span id="emoji-4536" tt="flag: El Salvador">🇸🇻</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-El-Salvador" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Sint Maarten" data-clipboard-target="#emoji-4537">
+<span id="emoji-4537" tt="flag: Sint Maarten">🇸🇽</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Sint-Maarten" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Syria" data-clipboard-target="#emoji-4538">
+<span id="emoji-4538" tt="flag: Syria">🇸🇾</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Syria" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Eswatini" data-clipboard-target="#emoji-4539">
+<span id="emoji-4539" tt="flag: Eswatini">🇸🇿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Eswatini" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Tristan da Cunha" data-clipboard-target="#emoji-4540">
+<span id="emoji-4540" tt="flag: Tristan da Cunha">🇹🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Tristan-da-Cunha" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Turks & Caicos Islands" data-clipboard-target="#emoji-4541">
+<span id="emoji-4541" tt="flag: Turks & Caicos Islands">🇹🇨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Turks--Caicos-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Chad" data-clipboard-target="#emoji-4542">
+<span id="emoji-4542" tt="flag: Chad">🇹🇩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Chad" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: French Southern Territories" data-clipboard-target="#emoji-4543">
+<span id="emoji-4543" tt="flag: French Southern Territories">🇹🇫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-French-Southern-Territories" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Togo" data-clipboard-target="#emoji-4544">
+<span id="emoji-4544" tt="flag: Togo">🇹🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Togo" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Thailand" data-clipboard-target="#emoji-4545">
+<span id="emoji-4545" tt="flag: Thailand">🇹🇭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Thailand" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Tajikistan" data-clipboard-target="#emoji-4546">
+<span id="emoji-4546" tt="flag: Tajikistan">🇹🇯</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Tajikistan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Tokelau" data-clipboard-target="#emoji-4547">
+<span id="emoji-4547" tt="flag: Tokelau">🇹🇰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Tokelau" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Timor-Leste" data-clipboard-target="#emoji-4548">
+<span id="emoji-4548" tt="flag: Timor-Leste">🇹🇱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Timor-Leste" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Turkmenistan" data-clipboard-target="#emoji-4549">
+<span id="emoji-4549" tt="flag: Turkmenistan">🇹🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Turkmenistan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Tunisia" data-clipboard-target="#emoji-4550">
+<span id="emoji-4550" tt="flag: Tunisia">🇹🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Tunisia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Tonga" data-clipboard-target="#emoji-4551">
+<span id="emoji-4551" tt="flag: Tonga">🇹🇴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Tonga" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Turkey" data-clipboard-target="#emoji-4552">
+<span id="emoji-4552" tt="flag: Turkey">🇹🇷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Turkey" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Trinidad & Tobago" data-clipboard-target="#emoji-4553">
+<span id="emoji-4553" tt="flag: Trinidad & Tobago">🇹🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Trinidad--Tobago" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Tuvalu" data-clipboard-target="#emoji-4554">
+<span id="emoji-4554" tt="flag: Tuvalu">🇹🇻</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Tuvalu" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Taiwan" data-clipboard-target="#emoji-4555">
+<span id="emoji-4555" tt="flag: Taiwan">🇹🇼</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Taiwan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Tanzania" data-clipboard-target="#emoji-4556">
+<span id="emoji-4556" tt="flag: Tanzania">🇹🇿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Tanzania" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Ukraine" data-clipboard-target="#emoji-4557">
+<span id="emoji-4557" tt="flag: Ukraine">🇺🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Ukraine" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Uganda" data-clipboard-target="#emoji-4558">
+<span id="emoji-4558" tt="flag: Uganda">🇺🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Uganda" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: U.S. Outlying Islands" data-clipboard-target="#emoji-4559">
+<span id="emoji-4559" tt="flag: U.S. Outlying Islands">🇺🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-US-Outlying-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: United Nations" data-clipboard-target="#emoji-4560">
+<span id="emoji-4560" tt="flag: United Nations">🇺🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-United-Nations" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: United States" data-clipboard-target="#emoji-4561">
+<span id="emoji-4561" tt="flag: United States">🇺🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-United-States" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Uruguay" data-clipboard-target="#emoji-4562">
+<span id="emoji-4562" tt="flag: Uruguay">🇺🇾</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Uruguay" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Uzbekistan" data-clipboard-target="#emoji-4563">
+<span id="emoji-4563" tt="flag: Uzbekistan">🇺🇿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Uzbekistan" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Vatican City" data-clipboard-target="#emoji-4564">
+<span id="emoji-4564" tt="flag: Vatican City">🇻🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Vatican-City" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: St. Vincent & Grenadines" data-clipboard-target="#emoji-4565">
+<span id="emoji-4565" tt="flag: St. Vincent & Grenadines">🇻🇨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-St-Vincent--Grenadines" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Venezuela" data-clipboard-target="#emoji-4566">
+<span id="emoji-4566" tt="flag: Venezuela">🇻🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Venezuela" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: British Virgin Islands" data-clipboard-target="#emoji-4567">
+<span id="emoji-4567" tt="flag: British Virgin Islands">🇻🇬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-British-Virgin-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: U.S. Virgin Islands" data-clipboard-target="#emoji-4568">
+<span id="emoji-4568" tt="flag: U.S. Virgin Islands">🇻🇮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-US-Virgin-Islands" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Vietnam" data-clipboard-target="#emoji-4569">
+<span id="emoji-4569" tt="flag: Vietnam">🇻🇳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Vietnam" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Vanuatu" data-clipboard-target="#emoji-4570">
+<span id="emoji-4570" tt="flag: Vanuatu">🇻🇺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Vanuatu" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Wallis & Futuna" data-clipboard-target="#emoji-4571">
+<span id="emoji-4571" tt="flag: Wallis & Futuna">🇼🇫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Wallis--Futuna" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Samoa" data-clipboard-target="#emoji-4572">
+<span id="emoji-4572" tt="flag: Samoa">🇼🇸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Samoa" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Kosovo" data-clipboard-target="#emoji-4573">
+<span id="emoji-4573" tt="flag: Kosovo">🇽🇰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Kosovo" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Yemen" data-clipboard-target="#emoji-4574">
+<span id="emoji-4574" tt="flag: Yemen">🇾🇪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Yemen" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Mayotte" data-clipboard-target="#emoji-4575">
+<span id="emoji-4575" tt="flag: Mayotte">🇾🇹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Mayotte" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: South Africa" data-clipboard-target="#emoji-4576">
+<span id="emoji-4576" tt="flag: South Africa">🇿🇦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-South-Africa" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Zambia" data-clipboard-target="#emoji-4577">
+<span id="emoji-4577" tt="flag: Zambia">🇿🇲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Zambia" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Zimbabwe" data-clipboard-target="#emoji-4578">
+<span id="emoji-4578" tt="flag: Zimbabwe">🇿🇼</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Zimbabwe" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: England" data-clipboard-target="#emoji-4579">
+<span id="emoji-4579" tt="flag: England">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-England" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Scotland" data-clipboard-target="#emoji-4580">
+<span id="emoji-4580" tt="flag: Scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Scotland" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flag: Wales" data-clipboard-target="#emoji-4581">
+<span id="emoji-4581" tt="flag: Wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flag-Wales" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="height:40px;"></div>
+<footer class="container-fluid footer">
+<div class="container-fluid" itemscope itemtype="https://schema.org/WPFooter">
+<footer>
+<div class="footer-menu">
+<ul>
+
+<li><a href="/">Home</a></li> |
+<li><a href="/about.html">About Us</a></li> |
+<li><a href="/contact.html">Contact Us</a></li> |
+<li><a href="/disclaimer.html">Disclaimer </a></li> |
+<li><a href="/privacy.html">Privacy</a></li>
+
+</ul>
+</div>
+</footer>
+<hr>
+<p> © 2024 YoSinTV Emoji</p>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://fancy-fonts.iamrohit.in/lib/clipboard.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("search-tools");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("tool-conversion-menu");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display="";
+        } else {
+            li[i].style.display="none";
+			
+        }
+    }
+}
+
+
+
+jQuery(document).ready(function(){
+	//jQuery('#donate_btn').hide();
+	jQuery(".menu-btn").click(function(){
+		jQuery(".menu").slideToggle();
+	});
+	jQuery(".sidebar-active").click(function(){
+		jQuery(".search-tools-wrap").slideToggle();
+	});
+	jQuery(document).on('click', '.sidebar-active.down', function(){
+		jQuery(".sidebar-active").removeClass("down");
+		jQuery(".sidebar-active").addClass("up");
+	});
+	jQuery(document).on('click', '.sidebar-active.up', function(){
+		jQuery(".sidebar-active").removeClass("up");
+		jQuery(".sidebar-active").addClass("down");
+	});
+});
+
+</script>
+<script>
+ 
+	$(".preloader").fadeOut("slow");
+	
+	$(".wordfind").click(function(){
+	    if($.trim($("#word").val())!="") {
+	    	$(".preloader").fadeIn("slow");
+	    }	
+	});
+
+$(function(){
+    $('.noSpace').keyup(function() {
+      $(this).val($(this).val().replace(/ +?/g, '?'));
+    });
+    var clipboard = new ClipboardJS('.copy-action');
+    clipboard.on('success', function(e) {
+        //console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        //console.log(e);
+    });
+    
+ 
+ $(document).on("click",".copy-txt", function(){
+     toastr.options.closeButton = true;
+     toastr.options.progressBar = true;
+     toastr.options.positionClass = 'toast-bottom-center';
+     toastr.options.timeOut = 1000;
+     toastr.remove();
+     toastr.success($(this).find("span").text()+' has been copied');
+ });
+
+  var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+$("#emoji").trigger("keyup");
+ $("#emoji").keyup(function(){
+    findemoji($(this).val());
+ });
+ 
+  
+  
+ function findemoji(txt) {
+      var em = $.trim(txt);
+     var that = $(this);
+     if(em) {
+     $(".sec-head-row").hide();
+      $(".emoji").each(function(vl){
+         var emTitle = $(this).find('span').attr('tt').toLowerCase();
+         if(emTitle.search(em.toLowerCase())>-1) {
+             $(this).css("display","block");
+         } else {
+              $(this).css("display","none");
+         }
+         
+       });
+     } else {
+        $(".emoji").css("display","block");
+        $(".sec-head-row").show();
+     }
+ }
+  
+});
+
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4884937050275938" crossorigin="anonymous"></script>
+</body></html>
