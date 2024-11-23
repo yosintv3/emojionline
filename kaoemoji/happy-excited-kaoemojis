@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy/Excited KaoEmojis</title>
+    <!-- Bootstrap Chttps://github.com/yosintv3/emojionline/tree/mainSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .emoji-box {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+        }
+        .emoji {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .copy-alert {
+            color: green;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        .ad-slot {
+            padding: 20px;
+            border: 2px dashed #ccc;
+            text-align: center;
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Happy/Excited KaoEmojis
+</h1>
+        <div id="emoji-container" class="row"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const emojis = [
+            "( ͡° ͜ʖ ͡°)", "¯\\_(ツ)_/¯", "(✿◠‿◠)", "(☞ﾟヮﾟ)☞", "(ノ◕ヮ◕)ノ*:･ﾟ✧", "(⌒‿⌒)", "(≧◡≦)", "(✧ω✧)", "(ᵔᴥᵔ)", "(◕‿◕✿)",
+"(ﾉ◕ヮ◕)ﾉ", "(✿╹◡╹)", "(ﾉﾟ▽ﾟ)ﾉ", "(｡♥‿♥｡)", "(✧≖‿ゝ≖)", "(｡•̀ᴗ-)✧", "٩(◕‿◕｡)۶", "(づ｡◕‿‿◕｡)づ", "ʕ•ᴥ•ʔ", "ლ(╹◡╹ლ)",
+"(✿◕‿◕)", "(´▽`ʃ♡ƪ)", "(^o^)／", "(¬‿¬)", "ヾ(⌐■_■)ノ♪", "(๑˃ᴗ˂)ﻭ", "(✪ω✪)", "(つ✧ω✧)つ", "(っ＾▿＾)っ", "(´∀｀)♡",
+"(つ▀¯▀)つ", "(∩^o^)⊃━☆", "＼(＾▽＾)／", "(⊃｡•́‿•̀｡)⊃", "(~‾▿‾)~", "(✿❛◡❛)", "ヽ(＾Д＾)ﾉ", "（‐＾▽＾‐）", "(´｡• ω •｡`)", "(´･ᴗ･ ` )",
+"( ͡~ ͜ʖ ͡°)", "(ღ˘⌣˘ღ)", "(◕‿◕｡)", "(¬ᴗ¬)", "(๑˃̵ᴗ˂̵)", "(ﾉ´ヮ´)ﾉ*:･ﾟ✧", "( •⌄• ू )✧", "(´｡•◡•｡)", "(。^_・)ノ", "(♡˙︶˙♡)",
+"ʕ´•ᴥ•`ʔ", "(/≧▽≦)/", "٩(｡•́‿•̀｡)۶", "(ღ✪v✪)", "(๑•̀ㅂ•́)و✧", "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧", "(つ≧▽≦)つ", "(o´▽`o)", "(♥ω♥ ) ~♪", "( ˘▽˘)っ♨",
+"(‘∀’●)♡", "(￣▽￣)ノ", "(ﾉ^ヮ^)ﾉ*:・ﾟ✧", "(｡♥‿♥｡)", "＼（＾▽＾）／", "(•́⌄•́๑)", "(๑˘︶˘๑)", "(づ￣ ³￣)づ", "(つ✿◕ヮ◕)つ", "(ᗒᗜᗕ)՛̵̖",
+"٩(◕‿◕｡)۶", "(⌐■_■)", "(☞⌐■_■)☞", "(✧ᗜ✧)", "ヾ(´▽｀*)ﾉ☆", "(•ω•)", "(⊃≧▽≦)⊃", "(★^O^★)", "(☞ﾟヮﾟ)☞", "(๑¯◡¯๑)",
+"٩(^‿^)۶", "(∩｡･ｏ･｡)っ", "(☆▽☆)", "(✧ω✧)", "ヽ(*≧ω≦)ﾉ", "(✿˘︶˘✿)", "ヽ(´▽`)/", "(‘-’*)", "(☞ﾟヮﾟ)☞", "( ^_^)/~~~",
+"(つ◕౪◕)つ━☆ﾟ.*", "(｡♥‿♥｡)", "(≧▽≦)", "(⌒▽⌒)", "(ﾉ´ヮ´)ﾉ*:･ﾟ✧", "(๑˃̵ᴗ˂̵)", "( ＾◡＾)", "ʕ•ᴥ•ʔノ", "(✿^‿^)", "(っ＾ω＾c)",
+"(☆ω☆)", "(๑╹◡╹)", "(≧∀≦)", "(￣▽￣)", "(ノ◕ヮ◕)ノ", "(ʘ‿ʘ)", "(☞◠‿◠)☞", "٩(＾◡＾)۶", "(╹◡╹)", "( ^ω^ )",
+"(っ✿◕‿◕✿)っ", "(ノ^_^)ノ", "(っ◔◡◔)っ", "(‘∀’●)♡", "(o´∀`o)", "(ノ≧∇≦)ノ", "＼(￣▽￣)／", "(o^▽^o)", "ヽ(＾Д＾)ﾉ", "(＾▽＾)"
+
+        ];
+
+        const emojiContainer = document.getElementById('emoji-container');
+
+        emojis.forEach((emoji, index) => {
+            // Create a column for each emoji
+            const col = document.createElement('div');
+            col.className = 'col-4'; // Bootstrap 4-column grid for 3 per row
+
+            const emojiBox = `
+                <div class="emoji-box">
+                    <span class="emoji">${emoji}</span>
+                    <button onclick="copyEmoji('${emoji}', this)">Copy</button>
+                    <div class="copy-alert">Copied!</div>
+                </div>
+            `;
+            col.innerHTML = emojiBox;
+            emojiContainer.appendChild(col);
+
+            // Add an ad slot after every 9 emojis
+            if ((index + 1) % 9 === 0) {
+                const adCol = document.createElement('div');
+                adCol.className = 'col-12'; // Full-width for the ad slot
+                adCol.innerHTML = `<div class="ad-slot"> 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5525538810839147"
+     crossorigin="anonymous"></script>
+<!-- Ressponsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5525538810839147"
+     data-ad-slot="4345862479"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>`;
+                emojiContainer.appendChild(adCol);
+            }
+        });
+
+        function copyEmoji(emoji, button) {
+            const tempInput = document.createElement("input");
+            document.body.appendChild(tempInput);
+            tempInput.value = emoji;
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            const alert = button.nextElementSibling;
+            alert.style.display = "block";
+            setTimeout(() => alert.style.display = "none", 1000);
+        }
+    </script>
+</body>
+</html>
