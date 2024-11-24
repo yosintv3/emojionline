@@ -1,0 +1,2578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<title> GetEmoji.Online - Copy Paste All Emojis For PC/laptop </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="google-site-verification" content="Gt1XIKLzd1w-Y589F8_jUR0MGQWCUf3CsLoyzvp9pOI" />
+<link rel="stylesheet" type="text/css" href="https://getemoji.online/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5525538810839147" crossorigin="anonymous"></script>
+
+	
+<style>
+      html, body {
+        font-family: 'Varela Round', sans-serif;
+        overflow-x: hidden;
+        font-size:18px;
+      }
+      a {
+        color:#0051C3;
+    }
+    a:hover{
+        color:#013a8a;
+    }
+    
+#button {
+  display: inline-block;
+  background-color: #2065d4;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 35px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+      .sticky {
+  position: fixed;
+  bottom: 0px;
+  width:100%;
+  right:.1%;
+  left:.1%;
+}
+
+.fancy-font {
+    font-size:18px;
+    
+}
+
+.sidebar-wrapper, .sidebar-active, input, textarea {
+    
+}
+
+
+
+    </style>
+<style>
+  .shadow-box{
+      margin-top:10px;margin-right:0px;text-align:center; border: 1px solid;
+      padding: 8px;
+     -webkit-box-shadow: 0 6px 5px -6px #777;
+     -moz-box-shadow: 0 6px 5px -6px #777;
+          box-shadow: 0 6px 5px -6px #777;
+      margin-left:0px;
+      border-radius: 8px;
+}
+
+
+.shadow-box:hover {
+  
+  background:yellow;
+}
+
+
+
+.copy-txt:hover {
+    cursor:pointer;
+}
+
+.ext {
+    font-size:20px; 
+    margin-top:-20px; 
+    margin-bottom:-10px; 
+    margin-right:-8px; 
+    float:right;
+    display:none;
+}
+
+.cp {
+    font-size:20px; 
+    margin-top:-22px; 
+    margin-bottom:-10px; 
+    margin-left:-7px; 
+    float:left;
+    display:none;
+}
+
+.shadow-box:hover .ext, .shadow-box:hover .cp {
+  display:block;
+}
+
+</style>
+<style>
+#info {
+    font-size: 20px;
+    }
+    #div_start {
+    float: right;
+    }
+    #headline {
+    text-decoration: none
+    }
+    #results {
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    min-height: 150px;
+    }
+    #start_button {
+    border: 0;
+    background-color:transparent;
+    padding: 0;
+    }
+    .interim {
+    color: gray;
+    }
+    .final {
+    color: black;
+    padding-right: 3px;
+    }
+    .button {
+    display: none;
+    }
+    .marquee {
+    margin: 20px auto;
+    }
+
+    #buttons {
+    margin: 10px 0;
+    position: relative;
+    top: -50px;
+    }
+
+    #copy {
+    margin-top: 20px;
+    }
+
+    #copy > div {
+    display: none;
+    margin: 0 70px;
+    }
+    
+    .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #333333;
+    width:96%;
+    margin:11px auto;
+    border-radius:20px;
+}
+    
+    .fa {
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin:11px;
+}
+
+.fa{display:none;}
+.input-group-btn{display:none;}
+
+
+.input-group .form-control{width:1268px;margin:0 auto;padding:5px 22px;}
+    </style>
+<style>
+.emoji {
+    font-size:34px;margin:8px 6px;float:left; width:19%; text-align:center;cursor: pointer;height:70px;border:2px solid #FFC83D;
+    box-shadow:none;
+}
+.emojione {
+    font-size:34px;margin-left:2px; margin-right:2px; width:85px; text-align:center;cursor: pointer;;
+}
+.toast {
+  opacity: 1 !important;
+  margin-bottom:100px !important;
+}
+
+#toast-container > div {
+  opacity: 1 !important; 
+  margin-bottom:100px !important;
+}
+
+[data-tooltip]::before {
+    /* needed - do not touch */
+    content: attr(data-tooltip);
+    position: absolute;
+    opacity: 0;
+    font-size:12px;
+
+    /* customizable */
+    
+    padding: 10px;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px silver;
+    z-index:99;
+}
+
+[data-tooltip]:hover::before {
+    /* needed - do not touch */
+    opacity: 1;
+
+    /* customizable */
+    background: yellow;
+    margin-top: -50px;
+    margin-left: -30px;
+    font-size:12px;
+    z-index:99;
+}
+
+[data-tooltip]:not([data-tooltip-persistent])::before {
+    pointer-events: none;
+}
+
+
+
+
+    </style>
+</head>
+<style>
+.preloader1 {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('https://lab.iamrohit.in/loader/loader.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-menu {
+    text-align: center;
+}
+
+.footer-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-menu ul li a:hover {
+    color: #ccc;
+}
+
+</style>
+<body>
+<a id="button"></a>
+<div class="preloader"></div>
+<div>
+<header class="container-fuild header" style="text-shadow: 2px 2px 2px black;">
+<div class="container-fuild">
+<div class="flex align-items justify-content">
+<div class="logo" style="width:200px;">
+<a href="/" style="font-size:24px; color:#FFFFFF; font-weight:bold;">
+GetEmoji.Online
+</a>
+</div>
+<div class="menu xs-hide sm-hide" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<ul>
+<li><a title="Home" itemprop="url" href="/">Smileys</a></li>
+<li><a title="Home" itemprop="url" href="./people.html">People & Body</a></li>
+<li><a title="Home" itemprop="url" href="./animals.html">Animals & Nature</a></li>
+<li><a title="Home" itemprop="url" href="./food.html">Food</a></li>
+<li><a title="Home" itemprop="url" href="./travel.html">Travel & Places</a></li>
+<li><a title="Home" itemprop="url" href="./activities.html">Activities</a></li>
+<li><a title="Home" itemprop="url" href="./objects.html">Objects</a></li>
+<li><a title="Home" itemprop="url" href="./symbols.html">Symbols</a></li>
+<li><a title="Home" itemprop="url" href="./flags.html">Flags</a></li>
+</ul>
+</div>
+<div class="md-hide lg-hide">
+<div class="menu-btn">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="container-fuild" style="margin-left:2%; margin-right:2%">
+<form method="post" action="/">
+<div class="row shadow-box" style="background:#fff; color:#FFFFFF;padding-right:0px;">
+<div class="col-md-6 col-md-offset-3 text-center">
+<input type="text" class="form-control" style="font-size:20px;height:45.5px;" placeholder="Find emojis by name" name="emoji" id="emoji" required="required" value>
+<span class="input-group-btn">
+<button class="btn btn-lg btn-success findemoji" type="submit"><i class="fa fa-search"></i></button>
+</span>
+</div>
+</div>
+</form>
+<center><h3>✂️ Copy and 📋 Paste Emoji 👍 Android TV | Mobile</h3></center>
+<center><h3>Click on emoji to copy</h3></center>
+<div class="row" style="text-align:center !important;">
+<div class="sec-head-row text-center">
+<div class="sec-head">
+<h1 itemprop="headline" class="page-title" id="Smileys&Emotion"> Smileys & Emotion</h1>
+</div>
+</div>
+<div class="col-md-12">
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="grinning face" data-clipboard-target="#emoji-1">
+<span id="emoji-1" tt="grinning face">😀</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/grinning-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="grinning face with big eyes" data-clipboard-target="#emoji-2">
+<span id="emoji-2" tt="grinning face with big eyes">😃</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/grinning-face-with-big-eyes" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="grinning face with smiling eyes" data-clipboard-target="#emoji-3">
+<span id="emoji-3" tt="grinning face with smiling eyes">😄</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/grinning-face-with-smiling-eyes" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="beaming face with smiling eyes" data-clipboard-target="#emoji-4">
+<span id="emoji-4" tt="beaming face with smiling eyes">😁</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/beaming-face-with-smiling-eyes" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="grinning squinting face" data-clipboard-target="#emoji-5">
+<span id="emoji-5" tt="grinning squinting face">😆</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/grinning-squinting-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="grinning face with sweat" data-clipboard-target="#emoji-6">
+<span id="emoji-6" tt="grinning face with sweat">😅</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/grinning-face-with-sweat" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="rolling on the floor laughing" data-clipboard-target="#emoji-7">
+<span id="emoji-7" tt="rolling on the floor laughing">🤣</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/rolling-on-the-floor-laughing" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with tears of joy" data-clipboard-target="#emoji-8">
+<span id="emoji-8" tt="face with tears of joy">😂</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-tears-of-joy" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="slightly smiling face" data-clipboard-target="#emoji-9">
+<span id="emoji-9" tt="slightly smiling face">🙂</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/slightly-smiling-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="upside-down face" data-clipboard-target="#emoji-10">
+<span id="emoji-10" tt="upside-down face">🙃</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/upside-down-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="winking face" data-clipboard-target="#emoji-11">
+<span id="emoji-11" tt="winking face">😉</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/winking-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="smiling face with smiling eyes" data-clipboard-target="#emoji-12">
+<span id="emoji-12" tt="smiling face with smiling eyes">😊</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/smiling-face-with-smiling-eyes" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="smiling face with halo" data-clipboard-target="#emoji-13">
+<span id="emoji-13" tt="smiling face with halo">😇</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/smiling-face-with-halo" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="smiling face with hearts" data-clipboard-target="#emoji-14">
+<span id="emoji-14" tt="smiling face with hearts">🥰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/smiling-face-with-hearts" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="smiling face with heart-eyes" data-clipboard-target="#emoji-15">
+<span id="emoji-15" tt="smiling face with heart-eyes">😍</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/smiling-face-with-heart-eyes" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="star-struck" data-clipboard-target="#emoji-16">
+<span id="emoji-16" tt="star-struck">🤩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/star-struck" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face blowing a kiss" data-clipboard-target="#emoji-17">
+<span id="emoji-17" tt="face blowing a kiss">😘</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-blowing-a-kiss" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="kissing face" data-clipboard-target="#emoji-18">
+<span id="emoji-18" tt="kissing face">😗</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/kissing-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="smiling face" data-clipboard-target="#emoji-19">
+<span id="emoji-19" tt="smiling face">☺️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/smiling-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="smiling face" data-clipboard-target="#emoji-20">
+<span id="emoji-20" tt="smiling face">☺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/smiling-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="kissing face with closed eyes" data-clipboard-target="#emoji-21">
+<span id="emoji-21" tt="kissing face with closed eyes">😚</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/kissing-face-with-closed-eyes" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="kissing face with smiling eyes" data-clipboard-target="#emoji-22">
+<span id="emoji-22" tt="kissing face with smiling eyes">😙</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/kissing-face-with-smiling-eyes" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="smiling face with tear" data-clipboard-target="#emoji-23">
+<span id="emoji-23" tt="smiling face with tear">🥲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/smiling-face-with-tear" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face savoring food" data-clipboard-target="#emoji-24">
+<span id="emoji-24" tt="face savoring food">😋</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-savoring-food" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with tongue" data-clipboard-target="#emoji-25">
+<span id="emoji-25" tt="face with tongue">😛</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-tongue" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="winking face with tongue" data-clipboard-target="#emoji-26">
+<span id="emoji-26" tt="winking face with tongue">😜</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/winking-face-with-tongue" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="zany face" data-clipboard-target="#emoji-27">
+<span id="emoji-27" tt="zany face">🤪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/zany-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="squinting face with tongue" data-clipboard-target="#emoji-28">
+<span id="emoji-28" tt="squinting face with tongue">😝</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/squinting-face-with-tongue" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="money-mouth face" data-clipboard-target="#emoji-29">
+<span id="emoji-29" tt="money-mouth face">🤑</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/money-mouth-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="hugging face" data-clipboard-target="#emoji-30">
+<span id="emoji-30" tt="hugging face">🤗</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/hugging-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with hand over mouth" data-clipboard-target="#emoji-31">
+<span id="emoji-31" tt="face with hand over mouth">🤭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-hand-over-mouth" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="shushing face" data-clipboard-target="#emoji-32">
+<span id="emoji-32" tt="shushing face">🤫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/shushing-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="thinking face" data-clipboard-target="#emoji-33">
+<span id="emoji-33" tt="thinking face">🤔</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/thinking-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="zipper-mouth face" data-clipboard-target="#emoji-34">
+<span id="emoji-34" tt="zipper-mouth face">🤐</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/zipper-mouth-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with raised eyebrow" data-clipboard-target="#emoji-35">
+<span id="emoji-35" tt="face with raised eyebrow">🤨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-raised-eyebrow" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="neutral face" data-clipboard-target="#emoji-36">
+<span id="emoji-36" tt="neutral face">😐</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/neutral-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="expressionless face" data-clipboard-target="#emoji-37">
+<span id="emoji-37" tt="expressionless face">😑</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/expressionless-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face without mouth" data-clipboard-target="#emoji-38">
+<span id="emoji-38" tt="face without mouth">😶</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-without-mouth" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face in clouds" data-clipboard-target="#emoji-39">
+<span id="emoji-39" tt="face in clouds">😶‍🌫️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-in-clouds" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face in clouds" data-clipboard-target="#emoji-40">
+<span id="emoji-40" tt="face in clouds">😶‍🌫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-in-clouds" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="smirking face" data-clipboard-target="#emoji-41">
+<span id="emoji-41" tt="smirking face">😏</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/smirking-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="unamused face" data-clipboard-target="#emoji-42">
+<span id="emoji-42" tt="unamused face">😒</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/unamused-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with rolling eyes" data-clipboard-target="#emoji-43">
+<span id="emoji-43" tt="face with rolling eyes">🙄</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-rolling-eyes" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="grimacing face" data-clipboard-target="#emoji-44">
+<span id="emoji-44" tt="grimacing face">😬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/grimacing-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face exhaling" data-clipboard-target="#emoji-45">
+<span id="emoji-45" tt="face exhaling">😮‍💨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-exhaling" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="lying face" data-clipboard-target="#emoji-46">
+<span id="emoji-46" tt="lying face">🤥</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/lying-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="relieved face" data-clipboard-target="#emoji-47">
+<span id="emoji-47" tt="relieved face">😌</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/relieved-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="pensive face" data-clipboard-target="#emoji-48">
+<span id="emoji-48" tt="pensive face">😔</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/pensive-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="sleepy face" data-clipboard-target="#emoji-49">
+<span id="emoji-49" tt="sleepy face">😪</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/sleepy-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="drooling face" data-clipboard-target="#emoji-50">
+<span id="emoji-50" tt="drooling face">🤤</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/drooling-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="sleeping face" data-clipboard-target="#emoji-51">
+<span id="emoji-51" tt="sleeping face">😴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/sleeping-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with medical mask" data-clipboard-target="#emoji-52">
+<span id="emoji-52" tt="face with medical mask">😷</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-medical-mask" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with thermometer" data-clipboard-target="#emoji-53">
+<span id="emoji-53" tt="face with thermometer">🤒</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-thermometer" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with head-bandage" data-clipboard-target="#emoji-54">
+<span id="emoji-54" tt="face with head-bandage">🤕</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-head-bandage" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="nauseated face" data-clipboard-target="#emoji-55">
+<span id="emoji-55" tt="nauseated face">🤢</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/nauseated-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face vomiting" data-clipboard-target="#emoji-56">
+<span id="emoji-56" tt="face vomiting">🤮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-vomiting" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="sneezing face" data-clipboard-target="#emoji-57">
+<span id="emoji-57" tt="sneezing face">🤧</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/sneezing-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="hot face" data-clipboard-target="#emoji-58">
+<span id="emoji-58" tt="hot face">🥵</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/hot-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="cold face" data-clipboard-target="#emoji-59">
+<span id="emoji-59" tt="cold face">🥶</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/cold-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="woozy face" data-clipboard-target="#emoji-60">
+<span id="emoji-60" tt="woozy face">🥴</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/woozy-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="knocked-out face" data-clipboard-target="#emoji-61">
+<span id="emoji-61" tt="knocked-out face">😵</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/knocked-out-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with spiral eyes" data-clipboard-target="#emoji-62">
+<span id="emoji-62" tt="face with spiral eyes">😵‍💫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-spiral-eyes" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="exploding head" data-clipboard-target="#emoji-63">
+<span id="emoji-63" tt="exploding head">🤯</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/exploding-head" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="cowboy hat face" data-clipboard-target="#emoji-64">
+<span id="emoji-64" tt="cowboy hat face">🤠</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/cowboy-hat-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="partying face" data-clipboard-target="#emoji-65">
+<span id="emoji-65" tt="partying face">🥳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/partying-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="disguised face" data-clipboard-target="#emoji-66">
+<span id="emoji-66" tt="disguised face">🥸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/disguised-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="smiling face with sunglasses" data-clipboard-target="#emoji-67">
+<span id="emoji-67" tt="smiling face with sunglasses">😎</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/smiling-face-with-sunglasses" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="nerd face" data-clipboard-target="#emoji-68">
+<span id="emoji-68" tt="nerd face">🤓</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/nerd-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with monocle" data-clipboard-target="#emoji-69">
+<span id="emoji-69" tt="face with monocle">🧐</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-monocle" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="confused face" data-clipboard-target="#emoji-70">
+<span id="emoji-70" tt="confused face">😕</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/confused-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="worried face" data-clipboard-target="#emoji-71">
+<span id="emoji-71" tt="worried face">😟</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/worried-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="slightly frowning face" data-clipboard-target="#emoji-72">
+<span id="emoji-72" tt="slightly frowning face">🙁</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/slightly-frowning-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="frowning face" data-clipboard-target="#emoji-73">
+<span id="emoji-73" tt="frowning face">☹️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/frowning-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="frowning face" data-clipboard-target="#emoji-74">
+<span id="emoji-74" tt="frowning face">☹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/frowning-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with open mouth" data-clipboard-target="#emoji-75">
+<span id="emoji-75" tt="face with open mouth">😮</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-open-mouth" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="hushed face" data-clipboard-target="#emoji-76">
+<span id="emoji-76" tt="hushed face">😯</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/hushed-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="astonished face" data-clipboard-target="#emoji-77">
+<span id="emoji-77" tt="astonished face">😲</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/astonished-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="flushed face" data-clipboard-target="#emoji-78">
+<span id="emoji-78" tt="flushed face">😳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/flushed-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="pleading face" data-clipboard-target="#emoji-79">
+<span id="emoji-79" tt="pleading face">🥺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/pleading-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="frowning face with open mouth" data-clipboard-target="#emoji-80">
+<span id="emoji-80" tt="frowning face with open mouth">😦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/frowning-face-with-open-mouth" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="anguished face" data-clipboard-target="#emoji-81">
+<span id="emoji-81" tt="anguished face">😧</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/anguished-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="fearful face" data-clipboard-target="#emoji-82">
+<span id="emoji-82" tt="fearful face">😨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/fearful-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="anxious face with sweat" data-clipboard-target="#emoji-83">
+<span id="emoji-83" tt="anxious face with sweat">😰</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/anxious-face-with-sweat" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="sad but relieved face" data-clipboard-target="#emoji-84">
+<span id="emoji-84" tt="sad but relieved face">😥</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/sad-but-relieved-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="crying face" data-clipboard-target="#emoji-85">
+<span id="emoji-85" tt="crying face">😢</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/crying-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="loudly crying face" data-clipboard-target="#emoji-86">
+<span id="emoji-86" tt="loudly crying face">😭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/loudly-crying-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face screaming in fear" data-clipboard-target="#emoji-87">
+<span id="emoji-87" tt="face screaming in fear">😱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-screaming-in-fear" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="confounded face" data-clipboard-target="#emoji-88">
+<span id="emoji-88" tt="confounded face">😖</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/confounded-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="persevering face" data-clipboard-target="#emoji-89">
+<span id="emoji-89" tt="persevering face">😣</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/persevering-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="disappointed face" data-clipboard-target="#emoji-90">
+<span id="emoji-90" tt="disappointed face">😞</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/disappointed-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="downcast face with sweat" data-clipboard-target="#emoji-91">
+<span id="emoji-91" tt="downcast face with sweat">😓</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/downcast-face-with-sweat" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="weary face" data-clipboard-target="#emoji-92">
+<span id="emoji-92" tt="weary face">😩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/weary-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="tired face" data-clipboard-target="#emoji-93">
+<span id="emoji-93" tt="tired face">😫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/tired-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="yawning face" data-clipboard-target="#emoji-94">
+<span id="emoji-94" tt="yawning face">🥱</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/yawning-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with steam from nose" data-clipboard-target="#emoji-95">
+<span id="emoji-95" tt="face with steam from nose">😤</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-steam-from-nose" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="pouting face" data-clipboard-target="#emoji-96">
+<span id="emoji-96" tt="pouting face">😡</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/pouting-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="angry face" data-clipboard-target="#emoji-97">
+<span id="emoji-97" tt="angry face">😠</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/angry-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="face with symbols on mouth" data-clipboard-target="#emoji-98">
+<span id="emoji-98" tt="face with symbols on mouth">🤬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/face-with-symbols-on-mouth" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="smiling face with horns" data-clipboard-target="#emoji-99">
+<span id="emoji-99" tt="smiling face with horns">😈</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/smiling-face-with-horns" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="angry face with horns" data-clipboard-target="#emoji-100">
+<span id="emoji-100" tt="angry face with horns">👿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/angry-face-with-horns" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="skull" data-clipboard-target="#emoji-101">
+<span id="emoji-101" tt="skull">💀</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/skull" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="skull and crossbones" data-clipboard-target="#emoji-102">
+<span id="emoji-102" tt="skull and crossbones">☠️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/skull-and-crossbones" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="skull and crossbones" data-clipboard-target="#emoji-103">
+<span id="emoji-103" tt="skull and crossbones">☠</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/skull-and-crossbones" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="pile of poo" data-clipboard-target="#emoji-104">
+<span id="emoji-104" tt="pile of poo">💩</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/pile-of-poo" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="clown face" data-clipboard-target="#emoji-105">
+<span id="emoji-105" tt="clown face">🤡</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/clown-face" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="ogre" data-clipboard-target="#emoji-106">
+<span id="emoji-106" tt="ogre">👹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/ogre" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="goblin" data-clipboard-target="#emoji-107">
+<span id="emoji-107" tt="goblin">👺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/goblin" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="ghost" data-clipboard-target="#emoji-108">
+<span id="emoji-108" tt="ghost">👻</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/ghost" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="alien" data-clipboard-target="#emoji-109">
+<span id="emoji-109" tt="alien">👽</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/alien" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="alien monster" data-clipboard-target="#emoji-110">
+<span id="emoji-110" tt="alien monster">👾</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/alien-monster" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="robot" data-clipboard-target="#emoji-111">
+<span id="emoji-111" tt="robot">🤖</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/robot" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="grinning cat" data-clipboard-target="#emoji-112">
+<span id="emoji-112" tt="grinning cat">😺</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/grinning-cat" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="grinning cat with smiling eyes" data-clipboard-target="#emoji-113">
+<span id="emoji-113" tt="grinning cat with smiling eyes">😸</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/grinning-cat-with-smiling-eyes" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="cat with tears of joy" data-clipboard-target="#emoji-114">
+<span id="emoji-114" tt="cat with tears of joy">😹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/cat-with-tears-of-joy" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="smiling cat with heart-eyes" data-clipboard-target="#emoji-115">
+<span id="emoji-115" tt="smiling cat with heart-eyes">😻</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/smiling-cat-with-heart-eyes" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="cat with wry smile" data-clipboard-target="#emoji-116">
+<span id="emoji-116" tt="cat with wry smile">😼</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/cat-with-wry-smile" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="kissing cat" data-clipboard-target="#emoji-117">
+<span id="emoji-117" tt="kissing cat">😽</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/kissing-cat" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="weary cat" data-clipboard-target="#emoji-118">
+<span id="emoji-118" tt="weary cat">🙀</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/weary-cat" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="crying cat" data-clipboard-target="#emoji-119">
+<span id="emoji-119" tt="crying cat">😿</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/crying-cat" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="pouting cat" data-clipboard-target="#emoji-120">
+<span id="emoji-120" tt="pouting cat">😾</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/pouting-cat" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="see-no-evil monkey" data-clipboard-target="#emoji-121">
+<span id="emoji-121" tt="see-no-evil monkey">🙈</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/see-no-evil-monkey" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="hear-no-evil monkey" data-clipboard-target="#emoji-122">
+<span id="emoji-122" tt="hear-no-evil monkey">🙉</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/hear-no-evil-monkey" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="speak-no-evil monkey" data-clipboard-target="#emoji-123">
+<span id="emoji-123" tt="speak-no-evil monkey">🙊</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/speak-no-evil-monkey" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="kiss mark" data-clipboard-target="#emoji-124">
+<span id="emoji-124" tt="kiss mark">💋</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/kiss-mark" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="love letter" data-clipboard-target="#emoji-125">
+<span id="emoji-125" tt="love letter">💌</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/love-letter" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="heart with arrow" data-clipboard-target="#emoji-126">
+<span id="emoji-126" tt="heart with arrow">💘</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/heart-with-arrow" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="heart with ribbon" data-clipboard-target="#emoji-127">
+<span id="emoji-127" tt="heart with ribbon">💝</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/heart-with-ribbon" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="sparkling heart" data-clipboard-target="#emoji-128">
+<span id="emoji-128" tt="sparkling heart">💖</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/sparkling-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="growing heart" data-clipboard-target="#emoji-129">
+<span id="emoji-129" tt="growing heart">💗</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/growing-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="beating heart" data-clipboard-target="#emoji-130">
+<span id="emoji-130" tt="beating heart">💓</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/beating-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="revolving hearts" data-clipboard-target="#emoji-131">
+<span id="emoji-131" tt="revolving hearts">💞</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/revolving-hearts" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="two hearts" data-clipboard-target="#emoji-132">
+<span id="emoji-132" tt="two hearts">💕</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/two-hearts" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="heart decoration" data-clipboard-target="#emoji-133">
+<span id="emoji-133" tt="heart decoration">💟</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/heart-decoration" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="heart exclamation" data-clipboard-target="#emoji-134">
+<span id="emoji-134" tt="heart exclamation">❣️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/heart-exclamation" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="heart exclamation" data-clipboard-target="#emoji-135">
+<span id="emoji-135" tt="heart exclamation">❣</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/heart-exclamation" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="broken heart" data-clipboard-target="#emoji-136">
+<span id="emoji-136" tt="broken heart">💔</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/broken-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="heart on fire" data-clipboard-target="#emoji-137">
+<span id="emoji-137" tt="heart on fire">❤️‍🔥</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/heart-on-fire" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="heart on fire" data-clipboard-target="#emoji-138">
+<span id="emoji-138" tt="heart on fire">❤‍🔥</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/heart-on-fire" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="mending heart" data-clipboard-target="#emoji-139">
+<span id="emoji-139" tt="mending heart">❤️‍🩹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/mending-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="mending heart" data-clipboard-target="#emoji-140">
+<span id="emoji-140" tt="mending heart">❤‍🩹</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/mending-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="red heart" data-clipboard-target="#emoji-141">
+<span id="emoji-141" tt="red heart">❤️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/red-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="red heart" data-clipboard-target="#emoji-142">
+<span id="emoji-142" tt="red heart">❤</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/red-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="orange heart" data-clipboard-target="#emoji-143">
+<span id="emoji-143" tt="orange heart">🧡</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/orange-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="yellow heart" data-clipboard-target="#emoji-144">
+<span id="emoji-144" tt="yellow heart">💛</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/yellow-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="green heart" data-clipboard-target="#emoji-145">
+<span id="emoji-145" tt="green heart">💚</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/green-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="blue heart" data-clipboard-target="#emoji-146">
+<span id="emoji-146" tt="blue heart">💙</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/blue-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="purple heart" data-clipboard-target="#emoji-147">
+<span id="emoji-147" tt="purple heart">💜</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/purple-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="brown heart" data-clipboard-target="#emoji-148">
+<span id="emoji-148" tt="brown heart">🤎</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/brown-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="black heart" data-clipboard-target="#emoji-149">
+<span id="emoji-149" tt="black heart">🖤</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/black-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="white heart" data-clipboard-target="#emoji-150">
+<span id="emoji-150" tt="white heart">🤍</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/white-heart" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="hundred points" data-clipboard-target="#emoji-151">
+<span id="emoji-151" tt="hundred points">💯</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/hundred-points" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="anger symbol" data-clipboard-target="#emoji-152">
+<span id="emoji-152" tt="anger symbol">💢</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/anger-symbol" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="collision" data-clipboard-target="#emoji-153">
+<span id="emoji-153" tt="collision">💥</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/collision" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="dizzy" data-clipboard-target="#emoji-154">
+<span id="emoji-154" tt="dizzy">💫</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/dizzy" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="sweat droplets" data-clipboard-target="#emoji-155">
+<span id="emoji-155" tt="sweat droplets">💦</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/sweat-droplets" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="dashing away" data-clipboard-target="#emoji-156">
+<span id="emoji-156" tt="dashing away">💨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/dashing-away" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="hole" data-clipboard-target="#emoji-157">
+<span id="emoji-157" tt="hole">🕳️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/hole" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="hole" data-clipboard-target="#emoji-158">
+<span id="emoji-158" tt="hole">🕳</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/hole" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="bomb" data-clipboard-target="#emoji-159">
+<span id="emoji-159" tt="bomb">💣</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/bomb" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="speech balloon" data-clipboard-target="#emoji-160">
+<span id="emoji-160" tt="speech balloon">💬</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/speech-balloon" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="eye in speech bubble" data-clipboard-target="#emoji-161">
+<span id="emoji-161" tt="eye in speech bubble">👁️‍🗨️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/eye-in-speech-bubble" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="eye in speech bubble" data-clipboard-target="#emoji-162">
+<span id="emoji-162" tt="eye in speech bubble">👁‍🗨️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/eye-in-speech-bubble" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="eye in speech bubble" data-clipboard-target="#emoji-163">
+<span id="emoji-163" tt="eye in speech bubble">👁️‍🗨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/eye-in-speech-bubble" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="eye in speech bubble" data-clipboard-target="#emoji-164">
+<span id="emoji-164" tt="eye in speech bubble">👁‍🗨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/eye-in-speech-bubble" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="left speech bubble" data-clipboard-target="#emoji-165">
+<span id="emoji-165" tt="left speech bubble">🗨️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/left-speech-bubble" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="left speech bubble" data-clipboard-target="#emoji-166">
+<span id="emoji-166" tt="left speech bubble">🗨</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/left-speech-bubble" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="right anger bubble" data-clipboard-target="#emoji-167">
+<span id="emoji-167" tt="right anger bubble">🗯️</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/right-anger-bubble" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="right anger bubble" data-clipboard-target="#emoji-168">
+<span id="emoji-168" tt="right anger bubble">🗯</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/right-anger-bubble" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="thought balloon" data-clipboard-target="#emoji-169">
+<span id="emoji-169" tt="thought balloon">💭</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/thought-balloon" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="shadow-box emoji">
+<div class="copy-txt copy-action" data-tooltip="zzz" data-clipboard-target="#emoji-170">
+<span id="emoji-170" tt="zzz">💤</span>
+<br/>
+<div class="cp">
+<a href="javascript:void(0);" title="Copy"><i class="fa fa-copy" aria-hidden="true"></i></a>
+</div>
+</div>
+<div class="ext">
+<a href="/zzz" title="Download"><i class="fa fa-download" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div style="height:40px;"></div>
+<footer class="container-fluid footer">
+<div class="container-fluid" itemscope itemtype="https://schema.org/WPFooter">
+<div class="row">
+<div class="xs-12" style="text-align:left;color:#ffffff">
+<h1>How to get emoji</h1>
+<p>You can get youtube emoji or facebook emoji really easy with a simple emoji copy paste from here to your comment or chat.</p>
+<h1> Are emojis copyrighted?</h1>
+Yes, the copyright on emoji exists from the moment of creation. However Emoji are Unicode characters that anyone can use. All copyrights, trademarks associated with emojis are the property of their respective owners.
+In general, as long as you are using emojis in a non-infringing manner and not misrepresenting a trademarked emoji as your own, you should be able to use them freely in your communication.
+<h1>Emoji mean</h1>
+<p>An emoji is a pictogram, logogram, ideogram, or smiley embedded in text and used in electronic messages and web pages. Created in 1999 in Japan by mister Shigetaka Kurita, emoji were initially used by Japanese mobile operators.The emoji images may be different on each platform such as Facebook, WhatsApp, Windows or Android version , for example the new Android Oreo’s has all-new emoji pictures so when you use them the characters may look different on each platform.
+</p>
+<hr/>
+<footer>
+<div class="footer-menu">
+<ul>
+	
+<li><a href="/">Home</a></li> |
+<li><a href="/about.html">About Us</a></li> |
+<li><a href="/contact.html">Contact Us</a></li> |
+<li><a href="/disclaimer.html">Disclaimer </a></li> |
+<li><a href="/terms-conditions.html">Terms & Conditions </a></li> |
+<li><a href="/privacy.html">Privacy</a></li>
+	
+</ul>
+</div>
+</footer>
+<hr>
+<p> © 2024 YoSinTV Emoji</p>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://fancy-fonts.iamrohit.in/lib/clipboard.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("search-tools");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("tool-conversion-menu");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display="";
+        } else {
+            li[i].style.display="none";
+			
+        }
+    }
+}
+
+
+
+jQuery(document).ready(function(){
+	//jQuery('#donate_btn').hide();
+	jQuery(".menu-btn").click(function(){
+		jQuery(".menu").slideToggle();
+	});
+	jQuery(".sidebar-active").click(function(){
+		jQuery(".search-tools-wrap").slideToggle();
+	});
+	jQuery(document).on('click', '.sidebar-active.down', function(){
+		jQuery(".sidebar-active").removeClass("down");
+		jQuery(".sidebar-active").addClass("up");
+	});
+	jQuery(document).on('click', '.sidebar-active.up', function(){
+		jQuery(".sidebar-active").removeClass("up");
+		jQuery(".sidebar-active").addClass("down");
+	});
+});
+
+</script>
+<script>
+ 
+	$(".preloader").fadeOut("slow");
+	
+	$(".wordfind").click(function(){
+	    if($.trim($("#word").val())!="") {
+	    	$(".preloader").fadeIn("slow");
+	    }	
+	});
+
+$(function(){
+    $('.noSpace').keyup(function() {
+      $(this).val($(this).val().replace(/ +?/g, '?'));
+    });
+    var clipboard = new ClipboardJS('.copy-action');
+    clipboard.on('success', function(e) {
+        //console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        //console.log(e);
+    });
+    
+ 
+ $(document).on("click",".copy-txt", function(){
+     toastr.options.closeButton = true;
+     toastr.options.progressBar = true;
+     toastr.options.positionClass = 'toast-bottom-center';
+     toastr.options.timeOut = 1000;
+     toastr.remove();
+     toastr.success($(this).find("span").text()+' has been copied');
+ });
+
+  var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+$("#emoji").trigger("keyup");
+ $("#emoji").keyup(function(){
+    findemoji($(this).val());
+ });
+ 
+  
+  
+ function findemoji(txt) {
+      var em = $.trim(txt);
+     var that = $(this);
+     if(em) {
+     $(".sec-head-row").hide();
+      $(".emoji").each(function(vl){
+         var emTitle = $(this).find('span').attr('tt').toLowerCase();
+         if(emTitle.search(em.toLowerCase())>-1) {
+             $(this).css("display","block");
+         } else {
+              $(this).css("display","none");
+         }
+         
+       });
+     } else {
+        $(".emoji").css("display","block");
+        $(".sec-head-row").show();
+     }
+ }
+  
+});
+
+</script>
+
+<!-- BEGIN: Powered by Supercounters.com -->
+<center><script type="text/javascript" src="//widget.supercounters.com/ssl/online_i.js"></script><script type="text/javascript">sc_online_i(1692372,"ffffff","e61c1c");</script><br><noscript><a href="https://www.supercounters.com/">free online counter</a></noscript>
+</center>
+<!-- END: Powered by Supercounters.com -->
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5525538810839147" crossorigin="anonymous"></script>
+<script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'88efa5e8cec78083',t:'MTcxNzU4NTExMi42NDYwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script>
+</body>
+</html>
