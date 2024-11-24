@@ -1,0 +1,96 @@
+<!-- First 9 Emojis -->
+<div class="col-4">
+<div class="emoji-box">
+<span class="emoji">(____)</span>
+<button onclick="copyEmoji('(____)', this)">Copy</button>
+<div class="copy-alert">Copied!</div>
+</div>
+</div>
+  
+<div class="col-4">
+<div class="emoji-box">
+<span class="emoji">(____)</span>
+<button onclick="copyEmoji('(____)', this)">Copy</button>
+<div class="copy-alert">Copied!</div>
+</div>
+</div>
+
+
+<div class="col-4">
+<div class="emoji-box">
+<span class="emoji">(____)</span>
+<button onclick="copyEmoji('(____)', this)">Copy</button>
+<div class="copy-alert">Copied!</div>
+</div>
+</div>
+
+
+<div class="col-4">
+<div class="emoji-box">
+<span class="emoji">(____)</span>
+<button onclick="copyEmoji('(____)', this)">Copy</button>
+<div class="copy-alert">Copied!</div>
+</div>
+</div>
+
+
+<div class="col-4">
+<div class="emoji-box">
+<span class="emoji">(____)</span>
+<button onclick="copyEmoji('(____)', this)">Copy</button>
+<div class="copy-alert">Copied!</div>
+</div>
+</div>
+
+
+<div class="col-4">
+<div class="emoji-box">
+<span class="emoji">(____)</span>
+<button onclick="copyEmoji('(____)', this)">Copy</button>
+<div class="copy-alert">Copied!</div>
+</div>
+</div>
+
+
+<div class="col-4">
+<div class="emoji-box">
+<span class="emoji">(____)</span>
+<button onclick="copyEmoji('(____)', this)">Copy</button>
+<div class="copy-alert">Copied!</div>
+</div>
+</div>
+
+
+<div class="col-4">
+<div class="emoji-box">
+<span class="emoji">(____)</span>
+<button onclick="copyEmoji('(____)', this)">Copy</button>
+<div class="copy-alert">Copied!</div>
+</div>
+</div>
+
+
+<div class="col-4">
+<div class="emoji-box">
+<span class="emoji">(____)</span>
+<button onclick="copyEmoji('(____)', this)">Copy</button>
+<div class="copy-alert">Copied!</div>
+</div>
+</div>
+
+
+
+<div class="col-4">
+<div class="emoji-box">
+<span class="emoji">(____)</span>
+<button onclick="copyEmoji('(____)', this)">Copy</button>
+<div class="copy-alert">Copied!</div>
+</div>
+</div>
+  
+
+<!-- Ad Slot -->
+<div class="col-12">
+<div class="ad-slot">Ad Space - Your Ad Here</div>
+</div>
+
