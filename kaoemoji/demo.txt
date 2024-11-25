@@ -1,4 +1,4 @@
-<!-- KaeEmoji Starts -->
+<!-- Kaomoji Starts -->
 <div class="row">  
 
 _____
@@ -21,4 +21,4 @@ _____
               
 </div>
 </div>
-<!-- KaeEmoji Ends -->
+<!-- Kaomoji Ends -->
