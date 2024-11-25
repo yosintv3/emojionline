@@ -1,5 +1,5 @@
 <!-- Kaomoji Starts -->
-<div class="row">  
+
 
 _____
   
@@ -20,5 +20,5 @@ _____
 </script>
               
 </div>
-</div>
+
 <!-- Kaomoji Ends -->
