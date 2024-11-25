@@ -1,8 +1,6 @@
 <!-- KaeEmoji Starts -->
 <div class="row">  
 
-
-
 _____
   
 
