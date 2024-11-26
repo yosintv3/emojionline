@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Redirect</title>
+    <script type="text/javascript">
+        // List of your 100+ links
+        const links = [
+            'https://www.getemoji.online/affection-kaomojis.html',
+            'https://www.getemoji.online/admiration-kaomojis.html',
+            'https://www.getemoji.online/joy-kaomojis.html',
+            // add all your links here
+        ];
+
+        // Function to randomly select a link
+        function redirectToRandomLink() {
+            const randomIndex = Math.floor(Math.random() * links.length);
+            window.location.href = links[randomIndex];
+        }
+
+        // Run the function when the page loads
+        window.onload = redirectToRandomLink;
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected, <a href="#" onclick="redirectToRandomLink()">click here</a>.</p>
+</body>
+</html>
