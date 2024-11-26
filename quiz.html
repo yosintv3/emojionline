@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take the Lok Sewa Nepal MCQ quiz to test your knowledge on Nepali history, politics, and geography. Perfect for preparation for Lok Sewa exams and learning about Nepal's history.">
+    <meta name="keywords" content="Lok Sewa Nepal MCQ, Nepal quiz, Nepal history, Nepal politics, online quiz, MCQ test, Lok Sewa online quiz">
+    <meta name="author" content="Your Name or Website">
     <title>Lok Sewa Nepal Quiz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -45,13 +48,88 @@
             border: 1px solid #ccc;
             background-color: #f8f9fa;
         }
+        
+        
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #ccc;
+        }
+        
+        .nav-link {
+            color: #fff !important;
+        }
+
+        .nav-link:hover {
+            color: #007bff !important;
+        }
+
+        .navbar {
+            background-color: #000;
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+        }
+
+        .seo-content {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        .centered-header {
+            text-align: center;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
-    <div class="container mt-5">
+
+
+ <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Lok Sewa Nepal Quiz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quiz-container">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#seo-content">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Centered Header -->
+    <div class="centered-header">
         <h2>Lok Sewa Nepal Quiz</h2>
+    </div>
+
+    <div class="container mt-5">
         <div id="quiz-container" class="mb-3"></div>
     </div>
+
+    <!-- SEO Content Section Above Footer -->
+    <div id="seo-content" class="seo-content">
+        <h3>About Lok Sewa Nepal Quiz</h3>
+        <p>Welcome to the Lok Sewa Nepal MCQ quiz! This online quiz is designed to test your knowledge on Nepal’s history, culture, politics, and geography. It is an excellent tool for anyone preparing for the Lok Sewa exams, as it covers essential topics that will help you build a strong foundation of knowledge about Nepal. The quiz contains multiple-choice questions (MCQs) that are designed to assess your understanding of key facts about Nepal.</p>
+        <p>Whether you are a student, a government exam aspirant, or simply interested in learning more about Nepal, this quiz is for you. Improve your understanding of Nepal's national symbols, leaders, geography, and political system, and track your progress as you take the test. Take the quiz today and get ready to ace your exams!</p>
+    </div>
+
+
+
 
     <script>
         // Questions data for Lok Sewa Nepal quiz with 20 questions
@@ -87,16 +165,6 @@
             if (index % 4 === 0 && index !== 0) {
                 quizContainer.innerHTML += `
                     <div class="ad-slot">
-                       &lt;center&gt;&lt;script type=&quot;text/javascript&quot;&gt;
-google_ad_client = &quot;ca-pub-5525538810839147&quot;;
-google_ad_host = &quot;pub-5525538810839147&quot;;
-/* DisplayAds1 */
-google_ad_slot = &quot;DisplayAds1&quot;;
-google_ad_width = 728;
-google_ad_height = 90;
-&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;//pagead2.googlesyndication.com/pagead/show_ads.js&quot;&gt;
-&lt;/script&gt;&lt;/center&gt;
                     </div>
                 `;
             }
@@ -150,6 +218,42 @@ google_ad_height = 90;
         });
     </script>
 
+
+    <script>
+        // Create the first script element for 'atOptions'
+        const script1 = document.createElement('script');
+        script1.type = 'text/javascript';
+        script1.text = `
+            atOptions = {
+                'key' : '9ca6d91b596e3a91fc58630089ad5dd1',
+                'format' : 'iframe',
+                'height' : 250,
+                'width' : 300,
+                'params' : {}
+            };
+        `;
+
+        // Create the second script element for the source
+        const script2 = document.createElement('script');
+        script2.type = 'text/javascript';
+        script2.src = '//hailofficemeasure.com/9ca6d91b596e3a91fc58630089ad5dd1/invoke.js';
+
+        // Append both scripts to the target container
+        const adContainer = document.getElementById('ad-slot');
+        adContainer.appendChild(script1);
+        adContainer.appendChild(script2);
+    </script>
+    
+    
+    
+        <footer>
+        <p>&copy; 2024 Lok Sewa Nepal Quiz. All rights reserved.</p>
+    </footer>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    
 </body>
 </html>
