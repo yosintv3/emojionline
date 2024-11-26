@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lok Sewa Nepal Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .quiz-button {
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .quiz-button:hover {
+            background-color: #007bff;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .quiz-button:focus {
+            outline: none;
+        }
+
+        .correct {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .incorrect {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .ad-slot {
+            margin: 20px 0;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Lok Sewa Nepal Quiz</h2>
+        <div id="quiz-container" class="mb-3"></div>
+    </div>
+
+    <script>
+        // Questions data for Lok Sewa Nepal quiz with 20 questions
+        const questions = [
+            { question: "Who was the first King of unified Nepal?", options: ["Prithvi Narayan Shah", "Tribhuvan", "Rana Bahadur Shah", "Surendra"], correct: 0 },
+            { question: "What is the capital city of Nepal?", options: ["Pokhara", "Biratnagar", "Kathmandu", "Lalitpur"], correct: 2 },
+            { question: "The Constitution of Nepal was promulgated on which date?", options: ["4th February 1990", "28th May 2008", "20th September 2015", "25th April 1991"], correct: 2 },
+            { question: "Which river is the longest in Nepal?", options: ["Koshi River", "Gandaki River", "Karnali River", "Bagmati River"], correct: 2 },
+            { question: "Which of the following is the national flower of Nepal?", options: ["Lotus", "Rhododendron", "Sunflower", "Tulip"], correct: 1 },
+            { question: "Who was the first female Prime Minister of Nepal?", options: ["Bidhya Devi Bhandari", "Sushila Koirala", "Asta Laxmi Shakya", "Pushpa Kamal Dahal"], correct: 0 },
+            { question: "What is the official currency of Nepal?", options: ["Indian Rupee", "Nepalese Rupee", "US Dollar", "Bhutanese Ngultrum"], correct: 1 },
+            { question: "The Parliament of Nepal is bicameral. Which of the following is the upper house?", options: ["House of Representatives", "National Assembly", "Provincial Assembly", "Constituent Assembly"], correct: 1 },
+            { question: "Which mountain is the highest in Nepal?", options: ["Mount Makalu", "Mount Kanchenjunga", "Mount Everest", "Mount Annapurna"], correct: 2 },
+            { question: "Which of the following is the main religion practiced in Nepal?", options: ["Hinduism", "Buddhism", "Islam", "Christianity"], correct: 0 },
+            { question: "What is the total area of Nepal?", options: ["147,516 km²", "120,000 km²", "1,30,000 km²", "130,000 km²"], correct: 0 },
+            { question: "Who is known as the father of modern Nepal?", options: ["Prithvi Narayan Shah", "Jang Bahadur Rana", "Chandra Sekher Azad", "Bishweshwar Prasad Koirala"], correct: 1 },
+            { question: "Which country shares the longest border with Nepal?", options: ["India", "China", "Bhutan", "Bangladesh"], correct: 0 },
+            { question: "Which is the national bird of Nepal?", options: ["Parrot", "Peacock", "Vulture", "Himalayan Monal"], correct: 3 },
+            { question: "The first elected Prime Minister of Nepal was?", options: ["Bishweshwar Prasad Koirala", "Sushil Koirala", "Pushpa Kamal Dahal", "Jhala Nath Khanal"], correct: 0 },
+            { question: "In which year did the Rana regime end?", options: ["1950", "1947", "1960", "1951"], correct: 0 },
+            { question: "Who is considered the founder of the Shah dynasty?", options: ["Prithvi Narayan Shah", "Birendra Bir Bikram", "Surendra", "Rana Bahadur Shah"], correct: 0 },
+            { question: "Which is the longest highway in Nepal?", options: ["Mahendra Highway", "Prithvi Highway", "Himalayan Highway", "East-West Highway"], correct: 3 },
+            { question: "What is the name of the official government-run television channel in Nepal?", options: ["Nepal Television", "NTV News", "Nepali Times", "Kantipur Television"], correct: 0 },
+            { question: "Who is the first woman president of Nepal?", options: ["Bidhya Devi Bhandari", "Sushila Koirala", "Anita Malla", "Kamala Devi"], correct: 0 },
+            { question: "What is the national tree of Nepal?", options: ["Bamboo", "Pine", "Sal", "Bodhi"], correct: 2 }
+        ];
+
+        // Dynamic question generation
+        const quizContainer = document.getElementById('quiz-container');
+
+        questions.forEach((q, index) => {
+            // Insert ad after every 4 questions
+            if (index % 4 === 0 && index !== 0) {
+                quizContainer.innerHTML += `
+                    <div class="ad-slot">
+                       
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5525538810839147"
+     crossorigin="anonymous"></script>
+<!-- URL Ads -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5525538810839147"
+     data-ad-slot="2116224617"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  
+                    </div>
+                `;
+            }
+
+            const questionHTML = `
+                <div class="mb-3" id="question-${index}">
+                    <label class="form-label">${q.question}</label><br>
+                    <div class="form-check">
+                        <button type="button" class="btn btn-outline-primary quiz-button" data-question="${index}" data-answer="0">${q.options[0]}</button>
+                    </div>
+                    <div class="form-check">
+                        <button type="button" class="btn btn-outline-primary quiz-button" data-question="${index}" data-answer="1">${q.options[1]}</button>
+                    </div>
+                    <div class="form-check">
+                        <button type="button" class="btn btn-outline-primary quiz-button" data-question="${index}" data-answer="2">${q.options[2]}</button>
+                    </div>
+                    <div class="form-check">
+                        <button type="button" class="btn btn-outline-primary quiz-button" data-question="${index}" data-answer="3">${q.options[3]}</button>
+                    </div>
+                    <div class="feedback" id="feedback-${index}"></div>
+                </div>
+            `;
+            quizContainer.innerHTML += questionHTML;
+        });
+
+        // Add event listeners to each button
+        document.querySelectorAll('.quiz-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const questionIndex = this.getAttribute('data-question');
+                const answerIndex = this.getAttribute('data-answer');
+                const question = questions[questionIndex];
+
+                const feedbackElement = document.getElementById(`feedback-${questionIndex}`);
+                const buttonElements = document.querySelectorAll(`#question-${questionIndex} .quiz-button`);
+
+                // Reset button styles
+                buttonElements.forEach(btn => {
+                    btn.classList.remove('correct', 'incorrect');
+                });
+
+                // Check if the answer is correct
+                if (parseInt(answerIndex) === question.correct) {
+                    this.classList.add('correct');
+                    feedbackElement.innerHTML = `<strong>Correct!</strong>`;
+                } else {
+                    this.classList.add('incorrect');
+                    const correctAnswer = question.options[question.correct];
+                    feedbackElement.innerHTML = `<strong>Incorrect! The correct answer is:</strong> ${correctAnswer}`;
+                }
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
